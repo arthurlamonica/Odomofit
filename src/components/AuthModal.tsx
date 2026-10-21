@@ -44,7 +44,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
             </div>
 
             <h3 className="text-2xl font-extrabold text-white font-heading">
-              Entrar no <span className="text-[#C6FF00]">Gymstagram</span>
+              Entrar na <span className="text-[#C6FF00]">ODomoFit</span>
             </h3>
             <p className="text-xs text-[#A7A7A7] mt-1 mb-6">
               Acesse seus treinos, acompanhamento de alunos e histórico de evolução.

@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
-import { FeatureCards } from './components/FeatureCards';
-import { PlatformPreview } from './components/PlatformPreview';
-import { CommunityFeed } from './components/CommunityFeed';
-import { WorkoutDemo } from './components/WorkoutDemo';
-import { ProgressDashboard } from './components/ProgressDashboard';
-import { TrainerSection } from './components/TrainerSection';
-import { ChallengesSection } from './components/ChallengesSection';
+import { ExploreProgram } from './components/ExploreProgram';
+import { DynamicExperience } from './components/DynamicExperience';
+import { SmartFeatures } from './components/SmartFeatures';
+import { ExperienceTrainers } from './components/ExperienceTrainers';
+import { TrainingCycle } from './components/TrainingCycle';
 import { PricingSection } from './components/PricingSection';
-import { TestimonialsSection } from './components/TestimonialsSection';
-import { FAQSection } from './components/FAQSection';
-import { FinalCTA } from './components/FinalCTA';
+import { AppDownloadBanner } from './components/AppDownloadBanner';
 import { Footer } from './components/Footer';
 import { InterestModal } from './components/InterestModal';
 import { AuthModal } from './components/AuthModal';
@@ -19,83 +15,68 @@ import { AuthModal } from './components/AuthModal';
 export const App: React.FC = () => {
   const [isInterestModalOpen, setIsInterestModalOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [selectedPlanId, setSelectedPlanId] = useState<string>('plano-plus');
+  const [selectedPlanId, setSelectedPlanId] = useState<string>('premium');
 
   const handleOpenInterest = (planId?: string) => {
     if (planId) setSelectedPlanId(planId);
     setIsInterestModalOpen(true);
   };
 
-  const handleExplorePlatform = () => {
-    const demoSection = document.getElementById('demonstracao');
-    if (demoSection) {
-      demoSection.scrollIntoView({ behavior: 'smooth' });
+  const handleExploreProgram = () => {
+    const programSection = document.getElementById('programas');
+    if (programSection) {
+      programSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#080B0B] text-white font-sans selection:bg-[#C6FF00] selection:text-[#080B0B] relative">
-      {/* Top Banner Notice for Launch / Demo Mode */}
-      <div className="bg-[#1F2224] border-b border-[#2D3236] text-[11px] sm:text-xs text-[#A7A7A7] py-2 px-4 text-center">
-        <span className="text-[#C6FF00] font-bold mr-1.5">⚡ GYMSTAGRAM PREVIEW:</span>
-        Plataforma em fase de pré-lançamento. Experimente a interface interativa e garanta seu acesso prioritário!
-      </div>
+    <div className="min-h-screen bg-[#08080A] text-white font-sans selection:bg-[#C6FF00] selection:text-[#08080A] relative overflow-x-hidden">
+      
+      {/* 1. Ruído Cinematográfico Global (feTurbulence - Diretriz GEMINI-Construtor-de-Sites) */}
+      <div className="noise-overlay" aria-hidden="true" />
 
-      {/* Header Navigation */}
+      {/* 2. Header / Barra de Navegação */}
       <Header
         onOpenAuth={() => setIsAuthModalOpen(true)}
         onOpenInterest={() => handleOpenInterest()}
       />
 
-      {/* Main Sections Flow */}
+      {/* 3. Fluxo Principal de Seções 1:1 com a Imagem de Referência */}
       <main>
-        {/* Section 2: Hero */}
+        {/* Seção 1: Hero Monumental com Atleta e Balões Flutuantes Interativos */}
         <HeroSection
           onOpenInterest={() => handleOpenInterest()}
-          onExplore={handleExplorePlatform}
+          onExplore={handleExploreProgram}
         />
 
-        {/* Section 3: Proposta de Valor (4 Feature Cards) */}
-        <FeatureCards />
+        {/* Seção 2: Explore Our Program (4 Cards com Destaque em Verde Neon) */}
+        <ExploreProgram />
 
-        {/* Section 4: Demonstração da Plataforma (4 Interactive Tabs) */}
-        <PlatformPreview />
+        {/* Seção 3: Dive Into Our Dynamic Fitness Experience (Cards de Atletas e Divisor Métrico) */}
+        <DynamicExperience />
 
-        {/* Section 5: Rede Social Fitness (Social Feed Preview with Likes & Comments) */}
-        <CommunityFeed />
+        {/* Seção 4: Funcionalidades com Badges 400+ Free Features e 400+ Free Videos */}
+        <SmartFeatures onLearnMore={() => handleOpenInterest('smart-features')} />
 
-        {/* Section 6: Treinos e Organização (Workout Routine, Timers & Checkoff) */}
-        <WorkoutDemo />
+        {/* Seção 5: Get To Know Our Team Of Experience Trainers (Esther, Leslie, Jacob) */}
+        <ExperienceTrainers
+          onSchedule={(trainer) => handleOpenInterest(`trainer-${trainer}`)}
+        />
 
-        {/* Section 7: Evolução e Estatísticas (Progress Dashboard with Period Filters) */}
-        <ProgressDashboard />
+        {/* Seção 6: O Ciclo de Treino e Saúde (Infográfico Circular em 6 Fases Interativas) */}
+        <TrainingCycle />
 
-        {/* Section 8: Área para Personal Trainers */}
-        <TrainerSection onOpenInterest={() => handleOpenInterest('plano-pro')} />
-
-        {/* Section 9: Desafios e Conquistas (Gamification) */}
-        <ChallengesSection />
-
-        {/* Section 10: Planos e Assinaturas */}
+        {/* Seção 7: Choose Your Pricing Plan (Standard, Premium em Verde Neon, Advanced) */}
         <PricingSection onSelectPlan={(planId) => handleOpenInterest(planId)} />
 
-        {/* Section 11: Depoimentos e Prova Social */}
-        <TestimonialsSection />
-
-        {/* Section 12: Perguntas Frequentes (FAQ Accordion) */}
-        <FAQSection />
-
-        {/* Section 13: CTA Final */}
-        <FinalCTA
-          onOpenInterest={() => handleOpenInterest()}
-          onExplore={handleExplorePlatform}
-        />
+        {/* Seção 8: Download The App To Get More Benefits (Banner Cinematográfico da Marca) */}
+        <AppDownloadBanner onDownload={() => handleOpenInterest('download-app')} />
       </main>
 
-      {/* Section 14: Footer */}
+      {/* 4. Rodapé Cinematográfico com Status Operacional do Sistema */}
       <Footer />
 
-      {/* Interactive Modals */}
+      {/* 5. Modais Interativos Funcionais */}
       <InterestModal
         isOpen={isInterestModalOpen}
         onClose={() => setIsInterestModalOpen(false)}

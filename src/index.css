@@ -1,14 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
-  --color-gym-lime: #C6FF00;
-  --color-gym-black: #080B0B;
-  --color-gym-card: #1F2224;
-  --color-gym-card-hover: #282C2F;
-  --color-gym-gray: #A7A7A7;
-  --color-gym-border: #2D3236;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Syne', 'Montserrat', sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  
+  /* ODomoFit Brand Palette (Verde Neon da Logo é o Primário Absoluto) */
+  --color-brand-neon: #C6FF00;
+  --color-brand-neon-hover: #B2E600;
+  --color-brand-neon-glow: rgba(198, 255, 0, 0.4);
+  --color-brand-dark: #08080A;
+  --color-brand-surface: #121318;
+  --color-brand-card: #15161C;
+  --color-brand-card-hover: #1D1E26;
+  --color-brand-gray: #9FA1AC;
+  --color-brand-border: rgba(255, 255, 255, 0.08);
+  --color-brand-border-neon: rgba(198, 255, 0, 0.35);
+  --color-brand-orange: #FF5E3A;
 }
 
 :root {
@@ -16,58 +25,196 @@
 }
 
 body {
-  background-color: #080B0B;
+  background-color: #08080A;
   color: #FFFFFF;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, .font-heading {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: -0.02em;
+  font-family: 'Syne', 'Montserrat', sans-serif;
+  letter-spacing: -0.025em;
 }
 
-/* Custom Lime Glow Utilities */
-.lime-glow {
-  box-shadow: 0 0 25px rgba(198, 255, 0, 0.22);
+/* =========================================================================
+   1. RUÍDO CINEMATOGRÁFICO SVG GLOBAL (feTurbulence - GEMINI-Construtor-de-Sites)
+   ========================================================================= */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-.lime-glow-sm {
-  box-shadow: 0 0 12px rgba(198, 255, 0, 0.2);
+/* =========================================================================
+   2. ANIMAÇÕES DO HERO E MICRO-INTERAÇÕES
+   ========================================================================= */
+@keyframes heroFloatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
 }
 
-.lime-glow-lg {
-  box-shadow: 0 0 40px rgba(198, 255, 0, 0.35);
+@keyframes heroFloatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(7px) rotate(-0.8deg);
+  }
 }
 
-.lime-border-glow {
-  border-color: #C6FF00;
+@keyframes heroPulseHeart {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  15% {
+    transform: scale(1.18);
+    opacity: 1;
+  }
+  30% {
+    transform: scale(1.02);
+  }
+  45% {
+    transform: scale(1.14);
+  }
+}
+
+.animate-float-slow {
+  animation: heroFloatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: heroFloatReverse 6s ease-in-out infinite;
+}
+
+.animate-heart-beat {
+  animation: heroPulseHeart 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* =========================================================================
+   3. GLOWS E SOMBRAS DA MARCA ODOMOFIT (VERDE NEON)
+   ========================================================================= */
+.neon-glow {
+  box-shadow: 0 4px 28px rgba(198, 255, 0, 0.42);
+}
+
+.neon-glow-lg {
+  box-shadow: 0 10px 45px rgba(198, 255, 0, 0.55);
+}
+
+.neon-glow-sm {
   box-shadow: 0 0 15px rgba(198, 255, 0, 0.3);
 }
 
-/* Glassmorphism */
-.glass-panel {
-  background: rgba(31, 34, 36, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.neon-border-glow {
+  border-color: #C6FF00;
+  box-shadow: 0 0 20px rgba(198, 255, 0, 0.35);
 }
 
-.glass-panel-dark {
-  background: rgba(8, 11, 11, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.orange-glow {
+  box-shadow: 0 4px 22px rgba(255, 94, 58, 0.4);
 }
 
-/* Custom Scrollbar */
+/* =========================================================================
+   4. GLASSMORPHISM & CARDS TÁTEIS
+   ========================================================================= */
+.hero-glass-card {
+  background: rgba(18, 19, 24, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.75);
+}
+
+.hero-glass-card:hover {
+  border-color: rgba(198, 255, 0, 0.4);
+  box-shadow: 0 20px 45px -6px rgba(0, 0, 0, 0.85), 0 0 20px rgba(198, 255, 0, 0.15);
+}
+
+.brand-card {
+  background: #131418;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.brand-card:hover {
+  background: #181920;
+  border-color: rgba(198, 255, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.6), 0 0 25px rgba(198, 255, 0, 0.12);
+}
+
+/* =========================================================================
+   5. BOTÕES MAGNÉTICOS TÁTEIS (CONSTRUTOR DE SITES)
+   ========================================================================= */
+.magnetic-btn {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.2s ease, box-shadow 0.25s ease;
+}
+
+.magnetic-btn:hover {
+  transform: scale(1.03) translateY(-1px);
+}
+
+.magnetic-btn:active {
+  transform: scale(0.97) translateY(0px);
+}
+
+/* Botão Primário Verde Neon ODomoFit */
+.btn-neon {
+  background-color: #C6FF00;
+  color: #08080A;
+  font-weight: 700;
+  box-shadow: 0 4px 24px rgba(198, 255, 0, 0.35);
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-neon:hover {
+  background-color: #D4FF00;
+  box-shadow: 0 6px 32px rgba(198, 255, 0, 0.55);
+  transform: scale(1.03) translateY(-1px);
+}
+
+.btn-neon:active {
+  transform: scale(0.97);
+}
+
+/* Botão Outline */
+.btn-outline-neon {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-outline-neon:hover {
+  border-color: #C6FF00;
+  color: #C6FF00;
+  background: rgba(198, 255, 0, 0.06);
+  transform: scale(1.03) translateY(-1px);
+}
+
+/* =========================================================================
+   6. CUSTOM SCROLLBAR
+   ========================================================================= */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #080B0B;
+  background: #08080A;
 }
 
 ::-webkit-scrollbar-thumb {

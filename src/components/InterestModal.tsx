@@ -70,7 +70,7 @@ export const InterestModal: React.FC<InterestModalProps> = ({ isOpen, onClose, d
             </div>
 
             <h3 className="text-2xl font-extrabold text-white font-heading">
-              Faça parte do <span className="text-[#C6FF00]">Gymstagram</span>
+              Faça parte da <span className="text-[#C6FF00]">ODomoFit</span>
             </h3>
             <p className="text-xs sm:text-sm text-[#A7A7A7] mt-1 mb-6 leading-relaxed">
               Cadastre-se na lista prioritária de lançamento e receba convite exclusivo com benefícios de pioneiro.
@@ -148,7 +148,7 @@ export const InterestModal: React.FC<InterestModalProps> = ({ isOpen, onClose, d
                   className="mt-0.5 rounded border-[#2D3236] accent-[#C6FF00] w-4 h-4 cursor-pointer"
                 />
                 <label htmlFor="consent" className="text-[11px] text-[#A7A7A7] leading-relaxed cursor-pointer">
-                  Concordo em receber atualizações de lançamento do Gymstagram de acordo com a Política de Privacidade e LGPD.
+                  Concordo em receber atualizações de lançamento da ODomoFit de acordo com a Política de Privacidade e LGPD.
                 </label>
               </div>
 

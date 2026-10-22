@@ -16,7 +16,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
           
           {/* Lado Esquerdo: Conteúdo Textual */}
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C6FF00] font-bold block">
+            <span className="text-xs font-['Montserrat'] uppercase tracking-widest text-[#C6FF00] font-extrabold block">
               Acessibilidade & Tecnologia
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-[1.1]">
@@ -29,7 +29,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
             <div className="pt-2">
               <button
                 onClick={onLearnMore}
-                className="px-6 py-3 rounded-full border border-white/20 text-white font-semibold text-xs sm:text-sm hover:border-[#C6FF00] hover:text-[#C6FF00] transition-all duration-200 inline-flex items-center gap-2 cursor-pointer magnetic-btn"
+                className="px-6 py-3 rounded-full border border-white/20 text-white font-semibold text-xs sm:text-sm hover:border-[#C6FF00] hover:text-[#C6FF00] transition-all duration-200 inline-flex items-center gap-2 cursor-pointer magnetic-btn font-['Montserrat']"
               >
                 <span>Saiba Mais</span>
                 <ArrowRight className="w-4 h-4 text-[#C6FF00]" />
@@ -51,8 +51,8 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
               <div className="absolute bottom-6 left-6 px-4 py-2.5 rounded-2xl bg-[#C6FF00] text-[#08080A] shadow-[0_10px_30px_rgba(198,255,0,0.4)] flex items-center gap-2.5 font-black text-xs sm:text-sm neon-glow-sm">
                 <Sparkles className="w-4 h-4 stroke-[2.5]" />
                 <div className="text-left leading-tight">
-                  <div className="text-xs font-black">400+</div>
-                  <div className="text-[9px] uppercase tracking-wider font-extrabold text-[#08080A]/90">Recursos Gratuitos</div>
+                  <div className="text-xs font-black font-['Montserrat']">400+</div>
+                  <div className="text-[9px] font-['Montserrat'] uppercase tracking-wider font-extrabold text-[#08080A]/90">Recursos Gratuitos</div>
                 </div>
               </div>
             </div>
@@ -79,8 +79,8 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
               <div className="absolute bottom-6 left-6 px-4 py-2.5 rounded-2xl bg-[#C6FF00] text-[#08080A] shadow-[0_10px_30px_rgba(198,255,0,0.4)] flex items-center gap-2.5 font-black text-xs sm:text-sm neon-glow-sm">
                 <Video className="w-4 h-4 stroke-[2.5]" />
                 <div className="text-left leading-tight">
-                  <div className="text-xs font-black">400+</div>
-                  <div className="text-[9px] uppercase tracking-wider font-extrabold text-[#08080A]/90">Vídeos & Aulas</div>
+                  <div className="text-xs font-black font-['Montserrat']">400+</div>
+                  <div className="text-[9px] font-['Montserrat'] uppercase tracking-wider font-extrabold text-[#08080A]/90">Vídeos & Aulas</div>
                 </div>
               </div>
             </div>
@@ -88,7 +88,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
 
           {/* Lado Direito: Conteúdo Textual */}
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C6FF00] font-bold block">
+            <span className="text-xs font-['Montserrat'] uppercase tracking-widest text-[#C6FF00] font-extrabold block">
               Dados em Tempo Real
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-[1.1]">

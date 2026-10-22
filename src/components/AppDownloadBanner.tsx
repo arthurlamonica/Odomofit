@@ -24,7 +24,7 @@ export const AppDownloadBanner: React.FC<AppDownloadBannerProps> = ({ onDownload
             
             {/* Lado Esquerdo: Textos e Botão de Download */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C6FF00]/20 border border-[#C6FF00]/40 text-[#C6FF00] text-xs font-black uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C6FF00]/20 border border-[#C6FF00]/40 text-[#C6FF00] text-xs font-black uppercase tracking-wider font-['Montserrat']">
                 <Smartphone className="w-3.5 h-3.5" />
                 <span>Aplicativo Móvel ODomoFit</span>
               </div>
@@ -41,13 +41,13 @@ export const AppDownloadBanner: React.FC<AppDownloadBannerProps> = ({ onDownload
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <button
                   onClick={onDownload}
-                  className="px-8 py-3.5 rounded-full bg-white text-[#08080A] font-extrabold text-sm hover:bg-[#C6FF00] hover:text-[#08080A] transition-all duration-300 shadow-xl flex items-center gap-2 cursor-pointer magnetic-btn hover:scale-105 active:scale-95"
+                  className="px-8 py-3.5 rounded-full bg-white text-[#08080A] font-['Montserrat'] font-extrabold text-sm hover:bg-[#C6FF00] hover:text-[#08080A] transition-all duration-300 shadow-xl flex items-center gap-2 cursor-pointer magnetic-btn hover:scale-105 active:scale-95"
                 >
                   <Download className="w-4 h-4" />
                   <span>Baixar o App</span>
                 </button>
 
-                <div className="flex items-center gap-3 text-xs text-white/70">
+                <div className="flex items-center gap-3 text-xs text-white/70 font-['Montserrat'] font-medium">
                   <span className="flex items-center gap-1">
                     <Apple className="w-4 h-4 fill-current text-white/90" />
                     iOS 17+

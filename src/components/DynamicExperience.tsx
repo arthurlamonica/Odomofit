@@ -14,7 +14,7 @@ export const DynamicExperience: React.FC = () => {
         
         {/* Cabeçalho com Badge da Referência */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C6FF00] text-[#08080A] text-xs font-black uppercase tracking-wider mb-4 neon-glow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C6FF00] text-[#08080A] text-xs font-black uppercase tracking-wider mb-4 neon-glow-sm font-['Montserrat']">
             <span>Nossas Aulas</span>
           </div>
           <h2 className="font-heading font-black text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white leading-tight">
@@ -44,11 +44,11 @@ export const DynamicExperience: React.FC = () => {
               {/* Card Flutuante 1: Gráfico de Evolução (Fev, Mar, Abr, Mai) da Referência */}
               <div className="absolute top-1/2 right-4 -translate-y-1/2 p-3 sm:p-4 rounded-2xl bg-[#08080A]/90 backdrop-blur-md border border-white/10 shadow-2xl z-20 hidden sm:block">
                 <div className="flex items-center justify-between gap-3 mb-2">
-                  <span className="text-[10px] font-bold text-[#9FA1AC] uppercase tracking-wider flex items-center gap-1">
+                  <span className="text-[10px] font-bold text-[#9FA1AC] uppercase tracking-wider flex items-center gap-1 font-['Montserrat']">
                     <TrendingUp className="w-3 h-3 text-[#C6FF00]" />
                     Evolução
                   </span>
-                  <span className="text-[10px] text-[#C6FF00] font-mono font-bold">+28%</span>
+                  <span className="text-[10px] text-[#C6FF00] font-['Montserrat'] font-bold">+28%</span>
                 </div>
                 {/* Mini Gráfico de Barras com Meses */}
                 <div className="flex items-end gap-2 h-12 pt-2 px-1">
@@ -73,7 +73,7 @@ export const DynamicExperience: React.FC = () => {
 
               {/* Bloco de Texto Inferior: Hipertrofia Máxima */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 z-20">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold mb-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold mb-3 font-['Montserrat']">
                   <Maximize2 className="w-3 h-3 text-[#C6FF00]" />
                   <span>Hipertrofia Máxima</span>
                 </div>
@@ -100,8 +100,8 @@ export const DynamicExperience: React.FC = () => {
               <div className="w-9 h-9 rounded-xl bg-[#C6FF00]/15 flex items-center justify-center text-[#C6FF00] mx-auto mb-1.5">
                 <Heart className="w-4 h-4 fill-current animate-heart-beat" />
               </div>
-              <div className="text-[9px] font-bold text-[#9FA1AC] uppercase">CARDÍACO</div>
-              <div className="text-xs sm:text-sm font-extrabold text-white">124 BPM</div>
+              <div className="text-[9px] font-bold text-[#9FA1AC] uppercase font-['Montserrat']">CARDÍACO</div>
+              <div className="text-xs sm:text-sm font-extrabold text-white font-['Montserrat']">124 BPM</div>
             </div>
 
             {/* Calories Badge */}
@@ -114,8 +114,8 @@ export const DynamicExperience: React.FC = () => {
               <div className="w-9 h-9 rounded-xl bg-[#FF5E3A]/15 flex items-center justify-center text-[#FF5E3A] mx-auto mb-1.5">
                 <Flame className="w-4 h-4 fill-current" />
               </div>
-              <div className="text-[9px] font-bold text-[#9FA1AC] uppercase">CALORIAS</div>
-              <div className="text-xs sm:text-sm font-extrabold text-white">441 Kcal</div>
+              <div className="text-[9px] font-bold text-[#9FA1AC] uppercase font-['Montserrat']">CALORIAS</div>
+              <div className="text-xs sm:text-sm font-extrabold text-white font-['Montserrat']">441 Kcal</div>
             </div>
 
           </div>
@@ -139,12 +139,12 @@ export const DynamicExperience: React.FC = () => {
               {/* Card Flutuante 2: Gym 2 Exercise Left da Referência */}
               <div className="absolute top-1/2 left-4 -translate-y-1/2 p-3 sm:p-4 rounded-2xl bg-[#08080A]/90 backdrop-blur-md border border-white/10 shadow-2xl z-20 hidden sm:block">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#C6FF00] text-[#08080A] flex items-center justify-center font-extrabold text-xs shadow-[0_0_15px_rgba(198,255,0,0.3)]">
+                  <div className="w-10 h-10 rounded-xl bg-[#C6FF00] text-[#08080A] flex items-center justify-center font-extrabold text-xs shadow-[0_0_15px_rgba(198,255,0,0.3)] font-['Montserrat']">
                     15 Kg
                   </div>
                   <div className="text-left">
-                    <div className="text-xs font-bold text-white">Rotina de Treino</div>
-                    <div className="text-[10px] text-[#C6FF00] font-semibold flex items-center gap-1">
+                    <div className="text-xs font-bold text-white font-['Montserrat']">Rotina de Treino</div>
+                    <div className="text-[10px] text-[#C6FF00] font-semibold flex items-center gap-1 font-['Montserrat']">
                       <CheckCircle2 className="w-3 h-3" />
                       <span>Faltam 2 Exercícios</span>
                     </div>
@@ -154,7 +154,7 @@ export const DynamicExperience: React.FC = () => {
 
               {/* Bloco de Texto Inferior: Definição de Core */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 z-20">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold mb-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold mb-3 font-['Montserrat']">
                   <Maximize2 className="w-3 h-3 text-[#C6FF00]" />
                   <span>Definição de Core</span>
                 </div>

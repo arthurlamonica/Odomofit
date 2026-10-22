@@ -60,7 +60,7 @@ export const ExperienceTrainers: React.FC<ExperienceTrainersProps> = ({ onSchedu
         {/* Cabeçalho da Seção */}
         <div className="flex items-center justify-between mb-12 sm:mb-16">
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C6FF00] font-bold block mb-1">
+            <span className="text-xs font-['Montserrat'] uppercase tracking-widest text-[#C6FF00] font-extrabold block mb-1">
               Corpo Docente Especializado
             </span>
             <h2 className="font-heading font-black text-2xl sm:text-4xl text-white uppercase tracking-tight max-w-xl">
@@ -114,7 +114,7 @@ export const ExperienceTrainers: React.FC<ExperienceTrainersProps> = ({ onSchedu
                   <div className="absolute inset-0 bg-gradient-to-t from-[#121318] via-transparent to-transparent" />
 
                   {/* Badge de Experiência flutuante */}
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#08080A]/80 backdrop-blur-md border border-white/10 text-[10px] font-mono text-[#C6FF00] font-bold">
+                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#08080A]/80 backdrop-blur-md border border-white/10 text-[10px] font-['Montserrat'] text-[#C6FF00] font-bold">
                     {trainer.experience}
                   </div>
                 </div>
@@ -124,7 +124,7 @@ export const ExperienceTrainers: React.FC<ExperienceTrainersProps> = ({ onSchedu
                   <h3 className="font-heading font-black text-xl sm:text-2xl text-white tracking-tight">
                     {trainer.name}
                   </h3>
-                  <p className="text-xs text-[#C6FF00] font-semibold uppercase tracking-wider">
+                  <p className="text-xs text-[#C6FF00] font-bold uppercase tracking-wider font-['Montserrat']">
                     {trainer.role}
                   </p>
                   <p className="text-xs text-[#9FA1AC] leading-relaxed pt-1">

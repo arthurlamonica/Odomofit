@@ -131,7 +131,7 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} ODomoFit®. Todos os direitos reservados.
           </div>
 
-          <div className="flex items-center gap-2 font-mono text-[11px] text-white/90">
+          <div className="flex items-center gap-2 font-['Montserrat'] font-semibold text-[11px] text-white/90">
             <span className="w-2 h-2 rounded-full bg-[#C6FF00] animate-ping" />
             <span className="w-2 h-2 rounded-full bg-[#C6FF00] -ml-4" />
             <span className="text-[#C6FF00] font-bold">● Sistema Operacional</span>

@@ -62,7 +62,7 @@ export const ExploreProgram: React.FC = () => {
         {/* Cabeçalho da Seção com Título e Setas de Navegação */}
         <div className="flex items-center justify-between mb-12 sm:mb-16">
           <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-[#C6FF00] font-bold block mb-1">
+            <span className="text-xs font-['Montserrat'] uppercase tracking-widest text-[#C6FF00] font-extrabold block mb-1">
               Metodologia de Alta Performance
             </span>
             <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white tracking-tight">
@@ -134,7 +134,7 @@ export const ExploreProgram: React.FC = () => {
                 </div>
 
                 {/* Tag de categoria inferior */}
-                <div className="pt-6 border-t border-current/15 flex items-center justify-between text-[11px] font-semibold">
+                <div className="pt-6 border-t border-current/15 flex items-center justify-between text-[11px] font-semibold font-['Montserrat']">
                   <span className={isActive ? 'text-[#08080A]/70' : 'text-[#9FA1AC]'}>
                     {prog.tag}
                   </span>

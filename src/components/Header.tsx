@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenInterest }) =>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 font-['Montserrat']">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -58,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenInterest }) =>
           </nav>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3.5">
+          <div className="hidden md:flex items-center gap-3.5 font-['Montserrat']">
             <button
               onClick={onOpenAuth}
               className="px-5 py-2 rounded-full text-xs font-semibold text-white/90 border border-white/20 hover:border-[#C6FF00] hover:text-[#C6FF00] transition-all duration-200 cursor-pointer flex items-center gap-1.5"

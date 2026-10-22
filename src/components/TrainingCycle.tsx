@@ -66,7 +66,7 @@ export const TrainingCycle: React.FC = () => {
         
         {/* Título da Seção */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24">
-          <span className="text-xs font-mono uppercase tracking-widest text-[#C6FF00] font-bold block mb-2">
+          <span className="text-xs font-['Montserrat'] uppercase tracking-widest text-[#C6FF00] font-extrabold block mb-2">
             Metodologia Biomecânica em 6 Fases
           </span>
           <h2 className="font-heading font-black text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white leading-tight">
@@ -128,7 +128,7 @@ export const TrainingCycle: React.FC = () => {
           >
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-heading font-extrabold text-base text-white">{steps[0].title}</h3>
-              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-mono font-bold flex items-center justify-center text-[#C6FF00]">
+              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-['Montserrat'] font-bold flex items-center justify-center text-[#C6FF00]">
                 1
               </span>
             </div>
@@ -148,7 +148,7 @@ export const TrainingCycle: React.FC = () => {
           >
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-heading font-extrabold text-base text-white">{steps[1].title}</h3>
-              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-mono font-bold flex items-center justify-center text-[#C6FF00]">
+              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-['Montserrat'] font-bold flex items-center justify-center text-[#C6FF00]">
                 2
               </span>
             </div>
@@ -168,7 +168,7 @@ export const TrainingCycle: React.FC = () => {
           >
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-heading font-extrabold text-base text-white">{steps[2].title}</h3>
-              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-mono font-bold flex items-center justify-center text-[#C6FF00]">
+              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-['Montserrat'] font-bold flex items-center justify-center text-[#C6FF00]">
                 3
               </span>
             </div>
@@ -188,7 +188,7 @@ export const TrainingCycle: React.FC = () => {
           >
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-heading font-extrabold text-base text-white">{steps[3].title}</h3>
-              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-mono font-bold flex items-center justify-center text-[#C6FF00]">
+              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-['Montserrat'] font-bold flex items-center justify-center text-[#C6FF00]">
                 4
               </span>
             </div>
@@ -208,7 +208,7 @@ export const TrainingCycle: React.FC = () => {
           >
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-heading font-extrabold text-base text-white">{steps[4].title}</h3>
-              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-mono font-bold flex items-center justify-center text-[#C6FF00]">
+              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-['Montserrat'] font-bold flex items-center justify-center text-[#C6FF00]">
                 5
               </span>
             </div>
@@ -228,7 +228,7 @@ export const TrainingCycle: React.FC = () => {
           >
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-heading font-extrabold text-base text-white">{steps[5].title}</h3>
-              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-mono font-bold flex items-center justify-center text-[#C6FF00]">
+              <span className="w-6 h-6 rounded-full bg-white/10 text-[11px] font-['Montserrat'] font-bold flex items-center justify-center text-[#C6FF00]">
                 6
               </span>
             </div>

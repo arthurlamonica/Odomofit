@@ -30,21 +30,21 @@ export const AppDownloadBanner: React.FC<AppDownloadBannerProps> = ({ onDownload
               </div>
 
               <h2 className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight leading-[1.05]">
-                Download The App To Get More Benefits
+                Baixe o App e Desbloqueie Todos os Benefícios
               </h2>
 
               <p className="text-sm sm:text-base text-white/80 leading-relaxed max-w-xl font-medium">
-                Join Our Fitness Family Today And Start Your Transformative Fitness Journey, Empowering Yourself To Feel Stronger, Healthier, And More Confident Than Ever Before.
+                Junte-se à família ODomoFit hoje mesmo e inicie sua jornada transformadora, conquistando mais força, saúde e confiança como você sempre quis.
               </p>
 
-              {/* Botão Get the app da Referência */}
+              {/* Botão Baixar o App */}
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <button
                   onClick={onDownload}
                   className="px-8 py-3.5 rounded-full bg-white text-[#08080A] font-extrabold text-sm hover:bg-[#C6FF00] hover:text-[#08080A] transition-all duration-300 shadow-xl flex items-center gap-2 cursor-pointer magnetic-btn hover:scale-105 active:scale-95"
                 >
                   <Download className="w-4 h-4" />
-                  <span>Get the app</span>
+                  <span>Baixar o App</span>
                 </button>
 
                 <div className="flex items-center gap-3 text-xs text-white/70">

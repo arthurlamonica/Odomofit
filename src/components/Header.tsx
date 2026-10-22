@@ -80,14 +80,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenInterest }) =>
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={onOpenInterest}
-              className="px-3.5 py-1.5 rounded-full btn-neon text-xs font-bold"
+              className="px-3.5 py-1.5 rounded-full bg-[#C6FF00] text-[#08080A] text-xs font-bold"
             >
-              Register
+              Começar
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg bg-[#121318] text-[#9FA1AC] hover:text-white border border-white/10"
-              aria-label="Toggle menu"
+              aria-label="Alternar menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -118,16 +118,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenInterest }) =>
               }}
               className="w-full py-2.5 rounded-xl border border-white/20 text-xs font-semibold text-white"
             >
-              Login
+              Entrar
             </button>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenInterest();
               }}
-              className="w-full py-2.5 rounded-xl btn-neon text-xs font-bold"
+              className="w-full py-2.5 rounded-xl bg-[#C6FF00] text-[#08080A] text-xs font-bold"
             >
-              Register
+              Cadastrar
             </button>
           </div>
         </div>

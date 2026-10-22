@@ -21,7 +21,7 @@ export const ExperienceTrainers: React.FC<ExperienceTrainersProps> = ({ onSchedu
     {
       id: 'esther-howard',
       name: 'Esther Howard',
-      role: 'Head of Strength & Conditioning',
+      role: 'Líder de Força & Condicionamento',
       specialty: 'Hipertrofia, Força Pura e Biomecânica',
       experience: '8+ anos de experiência',
       image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w=600&auto=format&fit=crop&q=80'
@@ -29,7 +29,7 @@ export const ExperienceTrainers: React.FC<ExperienceTrainersProps> = ({ onSchedu
     {
       id: 'leslie-alexander',
       name: 'Leslie Alexander',
-      role: 'Metabolic & Endurance Master',
+      role: 'Mestre em Resistência & Treino Metabólico',
       specialty: 'Definição Extrema, HIIT e Mobilidade',
       experience: '10+ anos de experiência',
       image: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&auto=format&fit=crop&q=80'
@@ -37,7 +37,7 @@ export const ExperienceTrainers: React.FC<ExperienceTrainersProps> = ({ onSchedu
     {
       id: 'jacob-jones',
       name: 'Jacob Jones',
-      role: 'Athletic Performance Specialist',
+      role: 'Especialista em Performance Atlética',
       specialty: 'Recuperação Funcional, Potência e Nutrição Esportiva',
       experience: '7+ anos de experiência',
       image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&auto=format&fit=crop&q=80'
@@ -64,7 +64,7 @@ export const ExperienceTrainers: React.FC<ExperienceTrainersProps> = ({ onSchedu
               Corpo Docente Especializado
             </span>
             <h2 className="font-heading font-black text-2xl sm:text-4xl text-white uppercase tracking-tight max-w-xl">
-              Get To Know Our Team Of Experience Trainers
+              Conheça Nossa Equipe de Treinadores Especialistas
             </h2>
           </div>
 

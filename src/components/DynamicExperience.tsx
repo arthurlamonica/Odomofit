@@ -15,10 +15,10 @@ export const DynamicExperience: React.FC = () => {
         {/* Cabeçalho com Badge da Referência */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C6FF00] text-[#08080A] text-xs font-black uppercase tracking-wider mb-4 neon-glow-sm">
-            <span>Our Classes</span>
+            <span>Nossas Aulas</span>
           </div>
           <h2 className="font-heading font-black text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white leading-tight">
-            Dive Into Our Dynamic Fitness Experience
+            Mergulhe em Nossa Dinâmica Experiência Fitness
           </h2>
         </div>
 
@@ -34,19 +34,19 @@ export const DynamicExperience: React.FC = () => {
               {/* Imagem Fotográfica da Atleta */}
               <img
                 src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&auto=format&fit=crop&q=80"
-                alt="Treino Muscle Max"
+                alt="Treino Hipertrofia Máxima"
                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 filter contrast-[1.08] brightness-[0.92]"
               />
 
               {/* Gradiente Escuro Inferior */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#08080A] via-[#08080A]/40 to-transparent" />
 
-              {/* Card Flutuante 1: Gráfico de Evolução (Feb, Mar, Apr, May) da Referência */}
+              {/* Card Flutuante 1: Gráfico de Evolução (Fev, Mar, Abr, Mai) da Referência */}
               <div className="absolute top-1/2 right-4 -translate-y-1/2 p-3 sm:p-4 rounded-2xl bg-[#08080A]/90 backdrop-blur-md border border-white/10 shadow-2xl z-20 hidden sm:block">
                 <div className="flex items-center justify-between gap-3 mb-2">
                   <span className="text-[10px] font-bold text-[#9FA1AC] uppercase tracking-wider flex items-center gap-1">
                     <TrendingUp className="w-3 h-3 text-[#C6FF00]" />
-                    Progress
+                    Evolução
                   </span>
                   <span className="text-[10px] text-[#C6FF00] font-mono font-bold">+28%</span>
                 </div>
@@ -54,7 +54,7 @@ export const DynamicExperience: React.FC = () => {
                 <div className="flex items-end gap-2 h-12 pt-2 px-1">
                   <div className="flex flex-col items-center gap-1">
                     <div className="w-2.5 bg-white/20 rounded-full h-4" />
-                    <span className="text-[8px] text-white/50">Feb</span>
+                    <span className="text-[8px] text-white/50">Fev</span>
                   </div>
                   <div className="flex flex-col items-center gap-1">
                     <div className="w-2.5 bg-white/40 rounded-full h-6" />
@@ -62,23 +62,23 @@ export const DynamicExperience: React.FC = () => {
                   </div>
                   <div className="flex flex-col items-center gap-1">
                     <div className="w-2.5 bg-white/70 rounded-full h-8" />
-                    <span className="text-[8px] text-white/50">Apr</span>
+                    <span className="text-[8px] text-white/50">Abr</span>
                   </div>
                   <div className="flex flex-col items-center gap-1">
                     <div className="w-2.5 bg-[#C6FF00] rounded-full h-11 shadow-[0_0_8px_#C6FF00]" />
-                    <span className="text-[8px] text-[#C6FF00] font-bold">May</span>
+                    <span className="text-[8px] text-[#C6FF00] font-bold">Mai</span>
                   </div>
                 </div>
               </div>
 
-              {/* Bloco de Texto Inferior: Muscle Max */}
+              {/* Bloco de Texto Inferior: Hipertrofia Máxima */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 z-20">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold mb-3">
                   <Maximize2 className="w-3 h-3 text-[#C6FF00]" />
-                  <span>Muscle Max</span>
+                  <span>Hipertrofia Máxima</span>
                 </div>
                 <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-sm">
-                  Maximize Muscle Growth Through Resistance Training, Protein Intake, And Adequate Rest.
+                  Maximize o ganho de massa através de treino resistido, ingestão proteica equilibrada e descanso adequado.
                 </p>
               </div>
 
@@ -100,7 +100,7 @@ export const DynamicExperience: React.FC = () => {
               <div className="w-9 h-9 rounded-xl bg-[#C6FF00]/15 flex items-center justify-center text-[#C6FF00] mx-auto mb-1.5">
                 <Heart className="w-4 h-4 fill-current animate-heart-beat" />
               </div>
-              <div className="text-[9px] font-bold text-[#9FA1AC] uppercase">HEARTBEAT</div>
+              <div className="text-[9px] font-bold text-[#9FA1AC] uppercase">CARDÍACO</div>
               <div className="text-xs sm:text-sm font-extrabold text-white">124 BPM</div>
             </div>
 
@@ -114,8 +114,8 @@ export const DynamicExperience: React.FC = () => {
               <div className="w-9 h-9 rounded-xl bg-[#FF5E3A]/15 flex items-center justify-center text-[#FF5E3A] mx-auto mb-1.5">
                 <Flame className="w-4 h-4 fill-current" />
               </div>
-              <div className="text-[9px] font-bold text-[#9FA1AC] uppercase">CALORIES</div>
-              <div className="text-xs sm:text-sm font-extrabold text-white">44411 Kcal</div>
+              <div className="text-[9px] font-bold text-[#9FA1AC] uppercase">CALORIAS</div>
+              <div className="text-xs sm:text-sm font-extrabold text-white">441 Kcal</div>
             </div>
 
           </div>
@@ -129,7 +129,7 @@ export const DynamicExperience: React.FC = () => {
               {/* Imagem Fotográfica da Atleta na Barra */}
               <img
                 src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop&q=80"
-                alt="Treino Core Crusher"
+                alt="Treino Definição de Core"
                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 filter contrast-[1.08] brightness-[0.92]"
               />
 
@@ -140,26 +140,26 @@ export const DynamicExperience: React.FC = () => {
               <div className="absolute top-1/2 left-4 -translate-y-1/2 p-3 sm:p-4 rounded-2xl bg-[#08080A]/90 backdrop-blur-md border border-white/10 shadow-2xl z-20 hidden sm:block">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#FF5E3A] text-white flex items-center justify-center font-bold text-xs">
-                    2.5 Lb
+                    15 Kg
                   </div>
                   <div className="text-left">
-                    <div className="text-xs font-bold text-white">Gym Routine</div>
+                    <div className="text-xs font-bold text-white">Rotina de Treino</div>
                     <div className="text-[10px] text-[#FF5E3A] font-semibold flex items-center gap-1">
                       <CheckCircle2 className="w-3 h-3" />
-                      <span>2 Exercise Left</span>
+                      <span>Faltam 2 Exercícios</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Bloco de Texto Inferior: Core Crusher */}
+              {/* Bloco de Texto Inferior: Definição de Core */}
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 z-20">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white text-xs font-bold mb-3">
                   <Maximize2 className="w-3 h-3 text-[#C6FF00]" />
-                  <span>Core Crusher</span>
+                  <span>Definição de Core</span>
                 </div>
                 <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-sm">
-                  An Intense Core-Focused Workout Aimed At Strengthening And Toning Abdominal And Lower Back Muscles.
+                  Treino intenso focado no core para fortalecer e tonificar a musculatura abdominal e lombar.
                 </p>
               </div>
 

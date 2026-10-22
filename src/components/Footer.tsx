@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
             </a>
             
             <p className="text-xs sm:text-sm text-[#9FA1AC] max-w-sm leading-relaxed">
-              Elevate Your Fitness Journey With Our Expert Guidance And Personalized Programs. Achieve Your Goals, One Rep At A Time. Join Us Today And Unleash Your Full Potential.
+              Eleve sua jornada fitness com nossa orientação especializada e programas personalizados. Alcance seus objetivos, uma repetição de cada vez. Junte-se a nós hoje e libere seu potencial máximo.
             </p>
 
             {/* Redes Sociais da Referência com SVGs Inline */}
@@ -82,44 +82,44 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Coluna 1: ABOUT */}
+          {/* Coluna 1: SOBRE NÓS */}
           <div className="space-y-4">
             <h4 className="font-heading font-black text-xs text-white uppercase tracking-wider">
-              About
+              Sobre Nós
             </h4>
             <ul className="space-y-2.5 text-xs text-[#9FA1AC]">
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Company</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Quality Guarantee</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Store Locations</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Sustainability</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">A Empresa</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Garantia de Qualidade</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Nossas Unidades</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Sustentabilidade</a></li>
             </ul>
           </div>
 
-          {/* Coluna 2: SUPPORT */}
+          {/* Coluna 2: SUPORTE & AJUDA */}
           <div className="space-y-4">
             <h4 className="font-heading font-black text-xs text-white uppercase tracking-wider">
-              Support
+              Suporte
             </h4>
             <ul className="space-y-2.5 text-xs text-[#9FA1AC]">
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Promotions & Sale</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Track Order</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Terms & Conditions</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Fale Conosco</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Planos & Vantagens</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Área do Aluno</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Política de Privacidade</a></li>
+              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Termos de Uso</a></li>
             </ul>
           </div>
 
-          {/* Coluna 3: LINKS */}
+          {/* Coluna 3: MODALIDADES */}
           <div className="space-y-4">
             <h4 className="font-heading font-black text-xs text-white uppercase tracking-wider">
-              Links
+              Modalidades
             </h4>
             <ul className="space-y-2.5 text-xs text-[#9FA1AC]">
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Sneakers</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Leather Shoes</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Sports Shoes</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Running Shoes</a></li>
-              <li><a href="#" className="hover:text-[#C6FF00] transition-colors">Brogue Shoes</a></li>
+              <li><a href="#programas" className="hover:text-[#C6FF00] transition-colors">Musculação & Hipertrofia</a></li>
+              <li><a href="#programas" className="hover:text-[#C6FF00] transition-colors">Cárdio & Resistência</a></li>
+              <li><a href="#programas" className="hover:text-[#C6FF00] transition-colors">Treino Funcional</a></li>
+              <li><a href="#programas" className="hover:text-[#C6FF00] transition-colors">Alta Performance</a></li>
+              <li><a href="#programas" className="hover:text-[#C6FF00] transition-colors">Nutrição Esportiva</a></li>
             </ul>
           </div>
 

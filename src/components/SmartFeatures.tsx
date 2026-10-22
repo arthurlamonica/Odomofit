@@ -20,10 +20,10 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
               Acessibilidade & Tecnologia
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-[1.1]">
-              Get More With Low Cost Advanced Features
+              Evolua Mais com Recursos Avançados e Acessíveis
             </h2>
             <p className="text-sm sm:text-base text-[#9FA1AC] leading-relaxed max-w-xl">
-              Access Advanced Features Typically Found In Higher-Priced Options, Enjoy Increased Benefits Without The Hefty Price Tag, Maximizing Your Investment.
+              Acesse funcionalidades avançadas antes restritas a planos de alto custo. Desfrute de benefícios completos sem mensalidades abusivas, maximizando seu investimento e seu tempo.
             </p>
 
             <div className="pt-2">
@@ -31,7 +31,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
                 onClick={onLearnMore}
                 className="px-6 py-3 rounded-full border border-white/20 text-white font-semibold text-xs sm:text-sm hover:border-[#C6FF00] hover:text-[#C6FF00] transition-all duration-200 inline-flex items-center gap-2 cursor-pointer magnetic-btn"
               >
-                <span>Read More</span>
+                <span>Saiba Mais</span>
                 <ArrowRight className="w-4 h-4 text-[#C6FF00]" />
               </button>
             </div>
@@ -42,7 +42,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
             <div className="relative rounded-[2rem] overflow-hidden bg-[#131418] border border-white/[0.08] aspect-[4/3] shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format&fit=crop&q=80"
-                alt="Treinador e Aluna"
+                alt="Treinador e Aluna em Treino"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-[1.05]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#08080A]/60 via-transparent to-transparent" />
@@ -52,7 +52,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
                 <Sparkles className="w-4 h-4" />
                 <div className="text-left leading-tight">
                   <div className="text-xs font-black">400+</div>
-                  <div className="text-[9px] uppercase tracking-wider font-semibold opacity-90">Free Features</div>
+                  <div className="text-[9px] uppercase tracking-wider font-semibold opacity-90">Recursos Gratuitos</div>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
             <div className="relative rounded-[2rem] overflow-hidden bg-[#131418] border border-white/[0.08] aspect-[4/3] shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800&auto=format&fit=crop&q=80"
-                alt="Smart Workout Metrices"
+                alt="Métricas e Treino Inteligente"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-[1.05]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#08080A]/60 via-transparent to-transparent" />
@@ -80,7 +80,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
                 <Video className="w-4 h-4" />
                 <div className="text-left leading-tight">
                   <div className="text-xs font-black">400+</div>
-                  <div className="text-[9px] uppercase tracking-wider font-semibold opacity-90">Free Videos</div>
+                  <div className="text-[9px] uppercase tracking-wider font-semibold opacity-90">Vídeos & Aulas</div>
                 </div>
               </div>
             </div>
@@ -92,10 +92,10 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
               Dados em Tempo Real
             </span>
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-[1.1]">
-              Smart Workout & Health Metrices
+              Treinos Inteligentes e Métricas de Saúde
             </h2>
             <p className="text-sm sm:text-base text-[#9FA1AC] leading-relaxed max-w-xl">
-              Utilizes Technology And Data To Optimize Workout Routines For Efficiency And Effectiveness, Offers Real-Time Feedback During Workouts To Improve Form, Intensity.
+              Utilize tecnologia de ponta e análise de dados para otimizar suas rotinas com total eficácia. Tenha feedback em tempo real para aperfeiçoar a postura, intensidade e segurança de cada repetição.
             </p>
 
             <div className="pt-2">
@@ -103,7 +103,7 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
                 onClick={onLearnMore}
                 className="px-6 py-3 rounded-full border border-white/20 text-white font-semibold text-xs sm:text-sm hover:border-[#C6FF00] hover:text-[#C6FF00] transition-all duration-200 inline-flex items-center gap-2 cursor-pointer magnetic-btn"
               >
-                <span>Read More</span>
+                <span>Saiba Mais</span>
                 <ArrowRight className="w-4 h-4 text-[#C6FF00]" />
               </button>
             </div>

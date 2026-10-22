@@ -9,46 +9,46 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
   const plans = [
     {
       id: 'standard',
-      name: 'Standard Plan',
+      name: 'Plano Standard',
       price: 'R$ 89',
       period: '/mês',
       description: 'Ideal para quem está iniciando e busca consistência com rotinas guiadas.',
       isFeatured: false,
       features: [
-        'Unlimited Gym Access',
-        '2x Fitness Consultant',
-        'Nutrition Tracking',
-        '3 Days Per Week Access'
+        'Acesso Ilimitado à Academia',
+        '2x Consultorias com Especialista',
+        'Acompanhamento de Metas',
+        'Horários Flexíveis na Semana'
       ]
     },
     {
       id: 'premium',
-      name: 'Premium Plan',
+      name: 'Plano Premium',
       price: 'R$ 149',
       period: '/mês',
       description: 'O plano mais procurado por praticantes que buscam evolução máxima e suporte.',
       isFeatured: true,
       features: [
-        'Unlimited Gym Access',
-        '7x Fitness Consultant',
-        'Nutrition Tracking',
-        'Official Gym Card VIP',
-        'Dedicated Personal Trainer'
+        'Acesso Total e Ilimitado',
+        '7x Consultorias com Treinador',
+        'Acompanhamento Nutricional',
+        'Cartão de Acesso VIP Oficial',
+        'Personal Trainer Dedicado'
       ]
     },
     {
       id: 'advanced',
-      name: 'Advanced Plan',
+      name: 'Plano Advanced',
       price: 'R$ 229',
       period: '/mês',
       description: 'A experiência definitiva com suporte biomecânico diário e bioimpedância.',
       isFeatured: false,
       features: [
-        'Unlimited Gym Access',
-        '10x Fitness Consultant',
-        'Nutrition Tracking',
-        'Official Gym Card VIP',
-        'All Programs & Masters Included'
+        'Acesso Total Livre e Sem Restrições',
+        '10x Consultorias de Alta Performance',
+        'Bioimpedância & Nutrição Avançada',
+        'Cartão VIP Black & Sala Exclusiva',
+        'Todos os Treinadores Especialistas Inclusos'
       ]
     }
   ];
@@ -64,10 +64,10 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
         {/* Cabeçalho da Seção com Badge da Referência */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C6FF00] text-[#08080A] text-xs font-black uppercase tracking-wider mb-4 neon-glow-sm">
-            <span>Our Pricing</span>
+            <span>Nossos Planos</span>
           </div>
           <h2 className="font-heading font-black text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white leading-tight">
-            Choose Your Pricing Plan
+            Escolha o Seu Plano de Treino
           </h2>
         </div>
 
@@ -86,7 +86,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
               {plan.isFeatured && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#C6FF00] text-[#08080A] text-[11px] font-black uppercase tracking-wider flex items-center gap-1 neon-glow-sm">
                   <Zap className="w-3.5 h-3.5 fill-current" />
-                  <span>Most Popular</span>
+                  <span>Mais Escolhido</span>
                 </div>
               )}
 
@@ -127,7 +127,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
                 </ul>
               </div>
 
-              {/* Botão Join Now com Seta da Referência */}
+              {/* Botão Começar Agora com Seta da Referência */}
               <div>
                 <button
                   onClick={() => onSelectPlan(plan.id)}
@@ -137,7 +137,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan }) 
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/15'
                   }`}
                 >
-                  <span>Join Now</span>
+                  <span>Começar Agora</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </button>
               </div>

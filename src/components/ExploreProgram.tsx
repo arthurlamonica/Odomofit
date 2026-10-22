@@ -15,33 +15,33 @@ export const ExploreProgram: React.FC = () => {
   const programs: ProgramItem[] = [
     {
       id: 'cardio-strength',
-      title: 'Cardio Strength',
+      title: 'Força e Cárdio',
       description:
-        'Combine cardiovascular exercise with strength training for a comprehensive workout that boosts both heart health and muscle strength.',
+        'Combine treinos cardiovasculares com fortalecimento muscular para uma evolução completa que potencializa a saúde cardíaca e a força funcional.',
       icon: <Dumbbell className="w-5 h-5" />,
       tag: 'Resistência & Cárdio'
     },
     {
       id: 'fat-lose',
-      title: 'Fat Lose',
+      title: 'Queima de Gordura',
       description:
-        'Reduce body fat by burning more calories than you consume through disciplined metabolic training, progressive overload and smart nutrition.',
+        'Reduza a gordura corporal e acelere seu metabolismo através de treinos disciplinados, sobrecarga progressiva e nutrição inteligente.',
       icon: <Flame className="w-5 h-5" />,
       tag: 'Queima Acelerada'
     },
     {
       id: 'muscle-gain',
-      title: 'Muscle Gain',
+      title: 'Ganho de Massa',
       description:
-        'Build dense lean muscle by engaging in targeted hypertrophy strength exercises and consuming adequate macros to optimize muscular growth.',
+        'Construa massa muscular densa com exercícios direcionados de hipertrofia e distribuição ideal de macronutrientes para o crescimento muscular.',
       icon: <BicepsFlexed className="w-5 h-5" />,
       tag: 'Hipertrofia Pura'
     },
     {
       id: 'nutrition',
-      title: 'Nutrition',
+      title: 'Nutrição Esportiva',
       description:
-        'Nutrition involves consuming a scientifically balanced diet that provides essential micronutrients and fuel to sustain peak athletic performance.',
+        'Uma alimentação balanceada e planejada cientificamente fornece os nutrientes e a energia necessários para sustentar o pico de performance atlética.',
       icon: <Apple className="w-5 h-5" />,
       tag: 'Dieta & Performance'
     }
@@ -66,7 +66,7 @@ export const ExploreProgram: React.FC = () => {
               Metodologia de Alta Performance
             </span>
             <h2 className="font-heading font-extrabold text-2xl sm:text-4xl text-white tracking-tight">
-              Explore Our Program
+              Explore Nossos Programas
             </h2>
           </div>
 

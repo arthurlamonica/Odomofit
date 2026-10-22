@@ -48,11 +48,11 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
               <div className="absolute inset-0 bg-gradient-to-t from-[#08080A]/60 via-transparent to-transparent" />
 
               {/* Badge 400+ Free Features da Referência */}
-              <div className="absolute bottom-6 left-6 px-4 py-2 rounded-2xl bg-[#FF5E3A] text-white shadow-xl flex items-center gap-2 font-black text-xs sm:text-sm">
-                <Sparkles className="w-4 h-4" />
+              <div className="absolute bottom-6 left-6 px-4 py-2.5 rounded-2xl bg-[#C6FF00] text-[#08080A] shadow-[0_10px_30px_rgba(198,255,0,0.4)] flex items-center gap-2.5 font-black text-xs sm:text-sm neon-glow-sm">
+                <Sparkles className="w-4 h-4 stroke-[2.5]" />
                 <div className="text-left leading-tight">
                   <div className="text-xs font-black">400+</div>
-                  <div className="text-[9px] uppercase tracking-wider font-semibold opacity-90">Recursos Gratuitos</div>
+                  <div className="text-[9px] uppercase tracking-wider font-extrabold text-[#08080A]/90">Recursos Gratuitos</div>
                 </div>
               </div>
             </div>
@@ -76,11 +76,11 @@ export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => 
               <div className="absolute inset-0 bg-gradient-to-t from-[#08080A]/60 via-transparent to-transparent" />
 
               {/* Badge 400+ Free Videos da Referência */}
-              <div className="absolute bottom-6 left-6 px-4 py-2 rounded-2xl bg-[#FF5E3A] text-white shadow-xl flex items-center gap-2 font-black text-xs sm:text-sm">
-                <Video className="w-4 h-4" />
+              <div className="absolute bottom-6 left-6 px-4 py-2.5 rounded-2xl bg-[#C6FF00] text-[#08080A] shadow-[0_10px_30px_rgba(198,255,0,0.4)] flex items-center gap-2.5 font-black text-xs sm:text-sm neon-glow-sm">
+                <Video className="w-4 h-4 stroke-[2.5]" />
                 <div className="text-left leading-tight">
                   <div className="text-xs font-black">400+</div>
-                  <div className="text-[9px] uppercase tracking-wider font-semibold opacity-90">Vídeos & Aulas</div>
+                  <div className="text-[9px] uppercase tracking-wider font-extrabold text-[#08080A]/90">Vídeos & Aulas</div>
                 </div>
               </div>
             </div>

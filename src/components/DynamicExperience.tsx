@@ -139,12 +139,12 @@ export const DynamicExperience: React.FC = () => {
               {/* Card Flutuante 2: Gym 2 Exercise Left da Referência */}
               <div className="absolute top-1/2 left-4 -translate-y-1/2 p-3 sm:p-4 rounded-2xl bg-[#08080A]/90 backdrop-blur-md border border-white/10 shadow-2xl z-20 hidden sm:block">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#FF5E3A] text-white flex items-center justify-center font-bold text-xs">
+                  <div className="w-10 h-10 rounded-xl bg-[#C6FF00] text-[#08080A] flex items-center justify-center font-extrabold text-xs shadow-[0_0_15px_rgba(198,255,0,0.3)]">
                     15 Kg
                   </div>
                   <div className="text-left">
                     <div className="text-xs font-bold text-white">Rotina de Treino</div>
-                    <div className="text-[10px] text-[#FF5E3A] font-semibold flex items-center gap-1">
+                    <div className="text-[10px] text-[#C6FF00] font-semibold flex items-center gap-1">
                       <CheckCircle2 className="w-3 h-3" />
                       <span>Faltam 2 Exercícios</span>
                     </div>

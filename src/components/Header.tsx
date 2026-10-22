@@ -23,7 +23,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenInterest }) =>
     { label: 'Programas', href: '#programas' },
     { label: 'Experiência', href: '#experiencia' },
     { label: 'Treinadores', href: '#treinadores' },
-    { label: 'Planos', href: '#precos' },
   ];
 
   return (

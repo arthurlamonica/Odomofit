@@ -6,7 +6,6 @@ import { DynamicExperience } from './components/DynamicExperience';
 import { SmartFeatures } from './components/SmartFeatures';
 import { ExperienceTrainers } from './components/ExperienceTrainers';
 import { TrainingCycle } from './components/TrainingCycle';
-import { PricingSection } from './components/PricingSection';
 import { AppDownloadBanner } from './components/AppDownloadBanner';
 import { Footer } from './components/Footer';
 import { InterestModal } from './components/InterestModal';
@@ -63,10 +62,7 @@ export const App: React.FC = () => {
         {/* Seção 6: O Ciclo de Treino e Saúde (Infográfico Circular em 6 Fases Interativas) */}
         <TrainingCycle />
 
-        {/* Seção 7: Choose Your Pricing Plan (Standard, Premium em Verde Neon, Advanced) */}
-        <PricingSection onSelectPlan={(planId) => handleOpenInterest(planId)} />
-
-        {/* Seção 8: Download The App To Get More Benefits (Banner Cinematográfico da Marca) */}
+        {/* Seção 7: Download The App To Get More Benefits (Banner Cinematográfico da Marca) */}
         <AppDownloadBanner onDownload={() => handleOpenInterest('download-app')} />
       </main>
 

@@ -31,9 +31,6 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#08080A] text-white font-sans selection:bg-[#C6FF00] selection:text-[#08080A] relative overflow-x-hidden">
-      
-      {/* 1. Ruído Cinematográfico Global (feTurbulence - Diretriz GEMINI-Construtor-de-Sites) */}
-      <div className="noise-overlay" aria-hidden="true" />
 
       {/* 2. Header / Barra de Navegação */}
       <Header

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { ArrowRight, Flame, Heart, Dumbbell, Play, Plus, Activity } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
+import gsap from 'gsap';
 
 interface HeroSectionProps {
   onOpenInterest: () => void;
@@ -7,229 +8,168 @@ interface HeroSectionProps {
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenInterest, onExplore }) => {
-  const [bpm, setBpm] = useState(124);
-  const [calories, setCalories] = useState(44411);
-  const [isBpmActive, setIsBpmActive] = useState(true);
+  const containerRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
 
-  // Efeito interativo ao clicar no batimento cardíaco
-  const handlePulseBpm = () => {
-    setBpm((prev) => (prev === 124 ? 146 : 124));
-    setCalories((prev) => prev + 24);
-    setIsBpmActive((prev) => !prev);
-  };
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+      tl.fromTo(
+        titleRef.current,
+        { y: 35, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, delay: 0.1 }
+      )
+        .fromTo(
+          descRef.current,
+          { y: 25, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.8 },
+          '-=0.6'
+        )
+        .fromTo(
+          ctaRef.current,
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.75 },
+          '-=0.55'
+        )
+        .fromTo(
+          statsRef.current ? statsRef.current.children : [],
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.7, stagger: 0.12 },
+          '-=0.45'
+        );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className="relative min-h-[92vh] lg:min-h-screen pt-24 sm:pt-28 pb-14 flex flex-col justify-between overflow-hidden bg-[#08080A] text-white">
-      
+    <section
+      ref={containerRef}
+      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-[#08080A] text-white pt-24 sm:pt-28 pb-12 sm:pb-16"
+    >
       {/* =========================================================================
-          1. EFEITOS DE ILUMINAÇÃO RADIAL EM VERDE NEON DA MARCA ODOMOFIT
+          1. FOTO DE FUNDO CINEMATOGRÁFICA (REFERÊNCIA: RACK DE HALTERES NA ACADEMIA)
           ========================================================================= */}
-      
-      {/* Geometria circular sutil do design de referência no canto superior esquerdo */}
-      <div 
-        className="absolute -top-32 -left-32 w-[620px] h-[620px] rounded-full border border-white/[0.04] pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(198, 255, 0, 0.03) 0%, rgba(8, 8, 10, 0.98) 75%)',
-          boxShadow: 'inset 0 0 100px rgba(0, 0, 0, 0.9)'
-        }}
-      />
-      <div 
-        className="absolute -top-16 -left-16 w-[420px] h-[420px] rounded-full border border-white/[0.03] pointer-events-none"
-      />
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/gym_hero_bg.jpg"
+          alt="Academia de alto padrão com rack de halteres metálicos"
+          className="w-full h-full object-cover object-center scale-[1.02] filter contrast-[1.05] brightness-[0.88]"
+        />
 
-      {/* Halo de luz neon atrás da cabeça e ombros do atleta */}
-      <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] rounded-full pointer-events-none blur-[120px]"
-        style={{
-          background: 'radial-gradient(circle, rgba(198, 255, 0, 0.16) 0%, rgba(255, 255, 255, 0.03) 35%, transparent 70%)'
-        }}
-      />
+        {/* Gradiente Lateral: Escurece suavemente da esquerda para a direita fundindo com o site */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#08080A]/95 via-[#08080A]/85 sm:via-[#08080A]/70 md:via-[#08080A]/55 to-[#08080A]/30" />
 
-      {/* Brilho neon sutil no quadrante direito */}
-      <div className="absolute top-1/4 right-10 w-96 h-96 bg-[#C6FF00]/10 rounded-full blur-[140px] pointer-events-none" />
+        {/* Gradiente Vertical: Suaviza o topo e a base fundindo 100% com o preto #08080A do site */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#08080A] via-transparent to-black/60" />
 
-      {/* =========================================================================
-          2. TIPOGRAFIA MONUMENTAL (HEADLINE 1:1 COM A REFERÊNCIA)
-          ========================================================================= */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-2 sm:pt-6 text-center select-none pointer-events-none">
-        <h1 className="font-heading font-black text-[2.75rem] sm:text-[4.2rem] md:text-[5.2rem] lg:text-[6.4rem] tracking-tight text-white leading-[1.02] uppercase drop-shadow-2xl">
-          <span className="block sm:inline">ELEVATE YOUR </span>
-          <span className="block sm:inline">FITNESS FOR</span>
-          <br className="hidden sm:inline" />
-          <span className="block sm:inline sm:mr-4"> HEALTH </span>
-          <span className="block sm:inline text-white/90">AND VITALITY.</span>
-        </h1>
+        {/* Halo Neon sutil de ambientação da marca ODomoFit no quadrante esquerdo */}
+        <div className="absolute top-1/3 -left-20 w-[480px] h-[480px] rounded-full bg-[#C6FF00]/[0.07] blur-[140px] pointer-events-none" />
+
+        {/* Ruído Cinematográfico Sutil (Diretriz Construtor de Sites) */}
+        <div className="absolute inset-0 opacity-[0.035] pointer-events-none noise-overlay" />
       </div>
 
       {/* =========================================================================
-          3. COMPOSIÇÃO CENTRAL: O ATLETA E OS BALÕES FLUTUANTES INTERATIVOS
+          2. CONTEÚDO PRINCIPAL (1:1 COM A REFERÊNCIA, NA PALETA OFICIAL DO SITE)
           ========================================================================= */}
-      <div className="relative w-full max-w-6xl mx-auto px-4 flex-1 flex items-center justify-center my-[-2.2rem] sm:my-[-3.8rem] lg:my-[-5rem] z-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex-1 flex flex-col justify-center my-auto">
         
-        {/* Container do Atleta com Máscara de Fade no Fundo */}
-        <div className="relative w-[310px] sm:w-[440px] md:w-[520px] lg:w-[580px] max-w-full aspect-[3/4] flex items-center justify-center">
-          
-          {/* Brilho neon de silhueta suave atrás da foto */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent via-[#C6FF00]/12 to-transparent blur-2xl transform scale-90" />
+        <div className="max-w-2xl lg:max-w-3xl text-left">
 
-          {/* Imagem do Homem Muscular com Halteres da Referência */}
-          <img
-            src="/images/hero_athlete.jpg"
-            alt="Atleta fitness com físico definido segurando halteres"
-            className="w-full h-full object-contain object-bottom filter contrast-[1.12] brightness-[1.03] transition-transform duration-700 hover:scale-[1.02]"
-            style={{
-              maskImage: 'linear-gradient(to bottom, black 82%, transparent 99%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, black 82%, transparent 99%)'
-            }}
-          />
-
-          {/* =====================================================================
-              BALÃO 1: FITNESS GYM / 4 EXERCISE + EQUALIZADOR NEON (SUPERIOR ESQUERDO)
-              ===================================================================== */}
-          <div 
-            className="absolute -top-2 left-2 sm:-left-8 md:-left-12 p-3 sm:p-4 rounded-2xl hero-glass-card cursor-pointer transition-all duration-300 hover:scale-105 animate-float-slow z-30"
-            title="Clique para ver o progresso da série"
+          {/* Headline Monumental Condensada com Destaque no Verde Neon do Site */}
+          <h1
+            ref={titleRef}
+            className="font-['Oswald'] font-bold text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem] xl:text-[6.2rem] uppercase leading-[0.94] tracking-tight text-white drop-shadow-2xl select-none"
           >
-            <div className="flex items-center gap-2.5 mb-2.5">
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white">
-                <Dumbbell className="w-4 h-4 text-[#C6FF00]" />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] font-semibold text-[#9FA1AC] tracking-wider uppercase">Fitness Gym</div>
-                <div className="text-xs sm:text-sm font-bold text-white">4 Exercise</div>
-              </div>
-            </div>
+            <span className="block text-white">TREINE COMO VOCÊ</span>
+            <span className="block text-[#C6FF00] drop-shadow-[0_0_35px_rgba(198,255,0,0.45)]">
+              PERFORMA.
+            </span>
+          </h1>
 
-            {/* Mini Equalizador / Gráfico de Barras do Treino em Verde Neon */}
-            <div className="flex items-end gap-1.5 h-7 pt-1 px-1">
-              <div className="w-1.5 bg-white/40 rounded-full h-3 animate-pulse" />
-              <div className="w-1.5 bg-white/70 rounded-full h-5" />
-              <div className="w-1.5 bg-[#C6FF00] rounded-full h-6 shadow-[0_0_8px_#C6FF00]" />
-              <div className="w-1.5 bg-white/50 rounded-full h-4" />
-              <div className="w-1.5 bg-[#C6FF00] rounded-full h-7 shadow-[0_0_10px_#C6FF00]" />
-              <div className="w-1.5 bg-white/80 rounded-full h-5" />
-            </div>
-          </div>
-
-          {/* =====================================================================
-              BALÃO 2: HEARTBEAT / 124 BPM (INFERIOR ESQUERDO)
-              ===================================================================== */}
-          <div 
-            onClick={handlePulseBpm}
-            className="absolute bottom-16 -left-3 sm:-left-10 md:-left-16 p-3 sm:p-3.5 rounded-2xl hero-glass-card cursor-pointer transition-all duration-300 hover:scale-105 animate-float-reverse z-30 group"
-            title="Clique para simular batimento em treino de alta intensidade"
+          {/* Subtítulo em Português do Brasil */}
+          <p
+            ref={descRef}
+            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-[#C7C9D3] font-sans font-normal leading-relaxed max-w-xl"
           >
-            <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-xl bg-[#C6FF00]/15 border border-[#C6FF00]/30 flex items-center justify-center text-[#C6FF00]">
-                <Heart className={`w-5 h-5 fill-current ${isBpmActive ? 'animate-heart-beat text-[#C6FF00]' : 'text-white'}`} />
-                <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#C6FF00] animate-ping" />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] font-bold text-[#9FA1AC] tracking-wider uppercase flex items-center gap-1">
-                  <span>Heartbeat</span>
-                  <Activity className="w-3 h-3 text-[#C6FF00]" />
-                </div>
-                <div className="text-sm sm:text-base font-extrabold text-white flex items-center gap-1">
-                  <span>{bpm}</span>
-                  <span className="text-[11px] text-[#9FA1AC] font-semibold">BPM</span>
-                </div>
-              </div>
-            </div>
-          </div>
+            Transforme seu físico sem abrir mão do seu estilo de vida. Treinamento fundamentado na ciência para quem busca o mais alto nível.
+          </p>
 
-          {/* =====================================================================
-              BALÃO 3: CALORIES / 44411 KCAL (SUPERIOR DIREITO)
-              ===================================================================== */}
-          <div 
-            onClick={() => setCalories((prev) => prev + 250)}
-            className="absolute top-10 -right-2 sm:-right-8 md:-right-14 p-3 sm:p-3.5 rounded-2xl hero-glass-card cursor-pointer transition-all duration-300 hover:scale-105 animate-float-slow z-30"
-            title="Clique para queimar mais calorias!"
+          {/* Botões de Ação com Micro-Interação Magnética nas Cores do Site */}
+          <div
+            ref={ctaRef}
+            className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4 sm:gap-5"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#FF5E3A]/15 border border-[#FF5E3A]/30 flex items-center justify-center text-[#FF5E3A] orange-glow">
-                <Flame className="w-5 h-5 fill-current" />
-              </div>
-              <div className="text-left">
-                <div className="text-[10px] font-bold text-[#9FA1AC] tracking-wider uppercase">Calories</div>
-                <div className="text-sm sm:text-base font-extrabold text-white">
-                  {calories.toLocaleString('en-US')} <span className="text-[11px] text-[#FF5E3A] font-semibold">Kcal</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      {/* =========================================================================
-          4. MÉTRICAS LATERAIS INFERIORES E TREINADORES (BOTTOM FLANKS)
-          ========================================================================= */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 pb-2">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4 border-t border-white/[0.08]">
-          
-          {/* Lado Esquerdo: Estatísticas dos Alunos e Aulas */}
-          <div className="flex items-center gap-8 text-left w-full sm:w-auto justify-around sm:justify-start">
-            <div>
-              <div className="text-2xl sm:text-3xl font-black font-heading text-white tracking-tight">120+</div>
-              <div className="text-xs text-[#9FA1AC] font-medium">Active Students</div>
-            </div>
-            <div className="w-px h-8 bg-white/10" />
-            <div>
-              <div className="text-2xl sm:text-3xl font-black font-heading text-white tracking-tight">240+</div>
-              <div className="text-xs text-[#9FA1AC] font-medium">Online Classes</div>
-            </div>
-          </div>
-
-          {/* Centro: Chamada para Ação / Botões da Plataforma com Verde Neon */}
-          <div className="flex items-center gap-3.5 order-last sm:order-none">
+            {/* Botão Primário: Verde Neon do Site com Texto Escuro de Máximo Contraste */}
             <button
               onClick={onOpenInterest}
-              className="px-6 sm:px-8 py-3 rounded-full btn-neon font-bold text-sm tracking-wide transition-all duration-200 hover:scale-105 active:scale-95 flex items-center gap-2 cursor-pointer shadow-lg"
+              className="btn-magnetic group relative inline-flex items-center justify-center gap-3 px-8 sm:px-9 py-4 rounded-full bg-[#C6FF00] text-[#08080A] font-['Montserrat'] font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-[0_12px_30px_rgba(198,255,0,0.35)] hover:shadow-[0_18px_45px_rgba(198,255,0,0.55)] hover:bg-[#B2E600] transition-all duration-300 cursor-pointer select-none active:scale-95 overflow-hidden"
             >
-              <span>Começar Agora</span>
-              <ArrowRight className="w-4 h-4" />
+              <span className="relative z-10 flex items-center gap-2">
+                <span>AGENDAR AVALIAÇÃO</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
             </button>
+
+            {/* Botão Secundário: Pílula Escura Fosca com Vidro e Borda com Hover Verde Neon */}
             <button
               onClick={onExplore}
-              className="px-5 sm:px-6 py-3 rounded-full btn-outline-neon text-sm flex items-center gap-2 cursor-pointer"
+              className="btn-magnetic inline-flex items-center justify-center px-8 sm:px-9 py-4 rounded-full bg-white/[0.06] hover:bg-white/[0.12] backdrop-blur-md border border-white/20 hover:border-[#C6FF00] hover:text-[#C6FF00] text-white font-['Montserrat'] font-semibold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 cursor-pointer select-none active:scale-95"
             >
-              <Play className="w-3.5 h-3.5 fill-current text-[#C6FF00]" />
-              <span>Ver Demonstração</span>
+              <span>VER PROGRAMAS</span>
             </button>
-          </div>
-
-          {/* Lado Direito: Treinadores + Avatar Stack + Botão Plus Verde Neon */}
-          <div className="flex items-center gap-3.5 w-full sm:w-auto justify-end">
-            <div className="text-right">
-              <div className="text-lg sm:text-xl font-black font-heading text-white tracking-tight leading-tight">50+</div>
-              <div className="text-[11px] font-bold text-[#9FA1AC] tracking-wider uppercase">Fitness Trainers</div>
-            </div>
-
-            {/* Avatares dos Treinadores com Botão Neon (+) */}
-            <div className="flex items-center -space-x-2.5">
-              <img
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face"
-                alt="Trainer"
-                className="w-10 h-10 rounded-full border-2 border-[#08080A] object-cover bg-[#1A1B22]"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
-                alt="Trainer"
-                className="w-10 h-10 rounded-full border-2 border-[#08080A] object-cover bg-[#1A1B22]"
-              />
-              <button 
-                onClick={onOpenInterest}
-                className="w-10 h-10 rounded-full bg-[#C6FF00] border-2 border-[#08080A] text-[#08080A] flex items-center justify-center font-black neon-glow-sm transition-transform duration-200 hover:scale-110 active:scale-95 cursor-pointer"
-                title="Conheça todos os treinadores"
-              >
-                <Plus className="w-4 h-4 stroke-[3]" />
-              </button>
-            </div>
           </div>
 
         </div>
+
       </div>
 
+      {/* =========================================================================
+          3. MÉTRICAS E TELEMETRIA INFERIOR COM DETALHES EM VERDE NEON
+          ========================================================================= */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-8 sm:pt-10">
+        <div
+          ref={statsRef}
+          className="flex flex-wrap items-center gap-8 sm:gap-14 md:gap-20 text-left border-t border-white/[0.12] pt-6 sm:pt-8"
+        >
+          {/* Métrica 1 */}
+          <div>
+            <div className="font-['Oswald'] font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-none">
+              500<span className="text-[#C6FF00]">+</span>
+            </div>
+            <div className="font-['Montserrat'] text-[11px] sm:text-xs font-semibold text-[#9FA1AC] uppercase tracking-wider mt-1.5">
+              HISTÓRIAS DE SUCESSO
+            </div>
+          </div>
+
+          {/* Métrica 2 */}
+          <div>
+            <div className="font-['Oswald'] font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-none">
+              100<span className="text-[#C6FF00]">%</span>
+            </div>
+            <div className="font-['Montserrat'] text-[11px] sm:text-xs font-semibold text-[#9FA1AC] uppercase tracking-wider mt-1.5">
+              PLANOS PERSONALIZADOS
+            </div>
+          </div>
+
+          {/* Métrica 3 */}
+          <div>
+            <div className="font-['Oswald'] font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-none">
+              24<span className="text-[#C6FF00]">/</span>7
+            </div>
+            <div className="font-['Montserrat'] text-[11px] sm:text-xs font-semibold text-[#9FA1AC] uppercase tracking-wider mt-1.5">
+              SUPORTE EXCLUSIVO
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
+
+export default HeroSection;

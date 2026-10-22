@@ -57,12 +57,6 @@ export const ExploreProgram: React.FC = () => {
 
   return (
     <section id="programas" className="relative py-20 sm:py-28 bg-[#08080A] overflow-hidden">
-      
-      {/* Marca d'água monumental de fundo da referência */}
-      <div className="absolute top-2 left-6 sm:left-16 text-[5rem] sm:text-[9rem] md:text-[12rem] font-heading font-black text-white/[0.025] select-none pointer-events-none uppercase leading-none tracking-tighter">
-        Program
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho da Seção com Título e Setas de Navegação */}

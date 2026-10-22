@@ -7,12 +7,6 @@ interface SmartFeaturesProps {
 export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => {
   return (
     <section className="py-20 sm:py-28 bg-[#08080A] relative overflow-hidden">
-      
-      {/* Marca d'água monumental "Fitness" da referência */}
-      <div className="absolute top-1/4 -left-10 text-[6rem] sm:text-[10rem] md:text-[14rem] font-heading font-black text-white/[0.025] select-none pointer-events-none uppercase leading-none tracking-tighter">
-        Fitness
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-24 sm:space-y-32">
         
         {/* =====================================================================

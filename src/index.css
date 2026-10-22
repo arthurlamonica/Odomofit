@@ -2,8 +2,10 @@
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'Syne', 'Montserrat', sans-serif;
-  --font-display: 'Syne', sans-serif;
+  --font-heading: 'Montserrat', 'Syne', sans-serif;
+  --font-display: 'Montserrat', 'Syne', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-condensed: 'Oswald', 'Bebas Neue', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   
   /* ODomoFit Brand Palette (Verde Neon da Logo é o Primário Absoluto) */
@@ -32,8 +34,8 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .font-heading {
-  font-family: 'Syne', 'Montserrat', sans-serif;
+h1, h2, h3, h4, .font-heading, .font-montserrat {
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: -0.025em;
 }
 

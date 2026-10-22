@@ -19,11 +19,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenInterest }) =>
   }, []);
 
   const navLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'Program', href: '#programas' },
-    { label: 'Experience', href: '#experiencia' },
-    { label: 'Trainers', href: '#treinadores' },
-    { label: 'Pricing', href: '#precos' },
+    { label: 'Início', href: '#' },
+    { label: 'Programas', href: '#programas' },
+    { label: 'Experiência', href: '#experiencia' },
+    { label: 'Treinadores', href: '#treinadores' },
+    { label: 'Planos', href: '#precos' },
   ];
 
   return (
@@ -65,13 +65,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenInterest }) =>
               className="px-5 py-2 rounded-full text-xs font-semibold text-white/90 border border-white/20 hover:border-[#C6FF00] hover:text-[#C6FF00] transition-all duration-200 cursor-pointer flex items-center gap-1.5"
             >
               <User className="w-3.5 h-3.5" />
-              <span>Login</span>
+              <span>Entrar</span>
             </button>
             <button
               onClick={onOpenInterest}
-              className="px-6 py-2 rounded-full btn-neon text-xs font-bold tracking-wide transition-all duration-200 cursor-pointer flex items-center gap-1.5"
+              className="px-6 py-2 rounded-full bg-[#C6FF00] text-[#08080A] hover:bg-[#B2E600] text-xs font-extrabold tracking-wide transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-[0_4px_16px_rgba(198,255,0,0.3)] hover:scale-105 active:scale-95"
             >
-              <span>Register</span>
+              <span>Começar</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>

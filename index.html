@@ -2,8 +2,8 @@
 <html lang="pt-BR" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/images/app-icons.png" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./images/app-icons.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
@@ -15,26 +15,67 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gymstagram.app/" />
-    <meta property="og:title" content="Gymstagram | Treinos, Evolução e Comunidade Fitness" />
-    <meta property="og:description" content="Organize seus treinos, acompanhe sua evolução e conecte-se a uma comunidade fitness. Conheça o Gymstagram, uma plataforma que aproxima praticantes e profissionais." />
-    <meta property="og:image" content="/images/hero.jpg" />
+    <meta property="og:url" content="https://odomofit.com.br/" />
+    <meta property="og:title" content="ODomoFit | Treinos, Evolução e Performance Fitness" />
+    <meta property="og:description" content="Organize seus treinos, acompanhe sua evolução e alcance o mais alto nível com o ODomoFit." />
+    <meta property="og:image" content="./images/gym_hero_bg.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://gymstagram.app/" />
-    <meta property="twitter:title" content="Gymstagram | Treinos, Evolução e Comunidade Fitness" />
-    <meta property="twitter:description" content="Organize seus treinos, acompanhe sua evolução e conecte-se a uma comunidade fitness. Conheça o Gymstagram, uma plataforma que aproxima praticantes e profissionais." />
-    <meta property="twitter:image" content="/images/hero.jpg" />
+    <meta property="twitter:url" content="https://odomofit.com.br/" />
+    <meta property="twitter:title" content="ODomoFit | Treinos, Evolução e Performance Fitness" />
+    <meta property="twitter:description" content="Organize seus treinos, acompanhe sua evolução e alcance o mais alto nível com o ODomoFit." />
+    <meta property="twitter:image" content="/images/gym_hero_bg.jpg" />
 
-    <!-- Google Fonts: Syne, Plus Jakarta Sans, Montserrat & Inter -->
+    <!-- Google Fonts: Oswald, Bebas Neue, Montserrat, Plus Jakarta Sans, Syne, Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-BJ2EyyQS.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DhflpDP_.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/index-CFnwsDcs.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-irZO_pgS.css">
   </head>
-  <body class="bg-[#08080A] text-white font-sans antialiased selection:bg-[#2F65F6] selection:text-white overflow-x-hidden">
+  <body class="bg-[#08080A] text-white font-sans antialiased selection:bg-[#C6FF00] selection:text-[#08080A] overflow-x-hidden">
     <div id="root"></div>
+
+    <!-- Script de entrada para o Vite Dev Server -->
+
+    <!-- Fallback automático para abertura direta (file:/// ou Live Server/preview estático) -->
+    <script>
+      (function() {
+        const isFileProtocol = window.location.protocol === 'file:';
+        
+        function loadFallbackBundle() {
+          const root = document.getElementById('root');
+          if (root && root.children.length === 0) {
+            console.log('Ambiente estático detectado. Carregando bundle compilado da ODomoFit...');
+            
+            // Injetar CSS compilado
+            if (!document.querySelector('link[href*="index-"]')) {
+              const link = document.createElement('link');
+              link.rel = 'stylesheet';
+              link.href = './dist/assets/index-BzKi85rs.css';
+              document.head.appendChild(link);
+            }
+
+            // Injetar JS compilado
+            const script = document.createElement('script');
+            script.type = 'module';
+            script.crossOrigin = 'anonymous';
+            script.src = './dist/assets/index-BkeiAhgb.js';
+            document.body.appendChild(script);
+          }
+        }
+
+        if (isFileProtocol) {
+          // Se aberto via protocolo file:///, carregar imediatamente
+          loadFallbackBundle();
+        } else {
+          // Se aberto via HTTP (ex: Live Server ou outro servidor estático sem Vite)
+          window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(loadFallbackBundle, 300);
+          });
+        }
+      })();
+    </script>
   </body>
 </html>

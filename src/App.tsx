@@ -15,7 +15,13 @@ import { ScrollProgressBar, BackToTopButton } from './components/ScrollExperienc
 export const App: React.FC = () => {
   const [isInterestModalOpen, setIsInterestModalOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authRole, setAuthRole] = useState<'aluno' | 'personal'>('aluno');
   const [selectedPlanId, setSelectedPlanId] = useState<string>('premium');
+
+  const handleOpenAuth = (role: 'aluno' | 'personal' = 'aluno') => {
+    setAuthRole(role);
+    setIsAuthModalOpen(true);
+  };
 
   const handleOpenInterest = (planId?: string) => {
     if (planId) setSelectedPlanId(planId);
@@ -36,7 +42,7 @@ export const App: React.FC = () => {
 
       {/* 2. Header / Barra de Navegação */}
       <Header
-        onOpenAuth={() => setIsAuthModalOpen(true)}
+        onOpenAuth={handleOpenAuth}
         onOpenInterest={() => handleOpenInterest()}
       />
 
@@ -85,6 +91,7 @@ export const App: React.FC = () => {
       <AuthModal
         isOpen={isAuthModalOpen}
         onClose={() => setIsAuthModalOpen(false)}
+        initialRole={authRole}
       />
     </div>
   );

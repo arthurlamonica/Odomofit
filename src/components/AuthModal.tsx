@@ -5,9 +5,15 @@ interface AuthModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSuccessDemo?: (role: 'aluno' | 'personal') => void;
+  initialRole?: 'aluno' | 'personal';
 }
 
-export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccessDemo }) => {
+export const AuthModal: React.FC<AuthModalProps> = ({
+  isOpen,
+  onClose,
+  onSuccessDemo,
+  initialRole = 'aluno',
+}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loggedInAs, setLoggedInAs] = useState<string | null>(null);
@@ -21,7 +27,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn">
-      <div className="bg-[#1F2224] border border-[#2D3236] rounded-2xl w-full max-w-md p-6 sm:p-8 relative shadow-2xl overflow-hidden">
+      <div className="bg-[#1F2224] border border-[#2D3236] rounded-2xl w-full max-w-md p-6 sm:p-8 relative shadow-2xl overflow-hidden font-['Montserrat']">
         
         {/* Glow */}
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#C6FF00]/10 rounded-bl-full blur-2xl pointer-events-none" />
@@ -39,15 +45,21 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
             <div className="flex items-center gap-2 mb-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#C6FF00]" />
               <span className="text-xs font-bold text-[#C6FF00] uppercase tracking-wider">
-                Acesso à Conta
+                {initialRole === 'personal' ? 'Portal do Profissional' : 'Portal do Aluno'}
               </span>
             </div>
 
             <h3 className="text-2xl font-extrabold text-white font-heading">
-              Entrar na <span className="text-[#C6FF00]">ODomoFit</span>
+              {initialRole === 'personal' ? (
+                <>Entrar como <span className="text-[#C6FF00]">Profissional</span></>
+              ) : (
+                <>Entrar como <span className="text-[#C6FF00]">Aluno</span></>
+              )}
             </h3>
             <p className="text-xs text-[#A7A7A7] mt-1 mb-6">
-              Acesse seus treinos, acompanhamento de alunos e histórico de evolução.
+              {initialRole === 'personal'
+                ? 'Gerencie seus alunos, monte treinos personalizados e acompanhe o progresso da sua consultoria.'
+                : 'Acesse seus treinos diários, evolução de cargas e histórico de treinos.'}
             </p>
 
             {/* One-click demo login options */}
@@ -59,10 +71,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                 <button
                   type="button"
                   onClick={() => handleSimulateLogin('aluno')}
-                  className="p-3 rounded-xl bg-[#080B0B] border border-[#2D3236] hover:border-[#C6FF00] text-left transition-all cursor-pointer group"
+                  className={`p-3 rounded-xl bg-[#080B0B] border ${initialRole === 'aluno' ? 'border-[#C6FF00] shadow-[0_0_12px_rgba(198,255,0,0.15)]' : 'border-[#2D3236]'} hover:border-[#C6FF00] text-left transition-all cursor-pointer group`}
                 >
-                  <div className="text-xs font-bold text-white group-hover:text-[#C6FF00]">
-                    Perfil Aluno
+                  <div className="text-xs font-bold text-white group-hover:text-[#C6FF00] flex items-center justify-between">
+                    <span>Perfil Aluno</span>
+                    {initialRole === 'aluno' && <span className="text-[10px] text-[#C6FF00] font-normal">Ativo</span>}
                   </div>
                   <div className="text-[10px] text-[#A7A7A7]">Testar como atleta</div>
                 </button>
@@ -70,10 +83,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
                 <button
                   type="button"
                   onClick={() => handleSimulateLogin('personal')}
-                  className="p-3 rounded-xl bg-[#080B0B] border border-[#2D3236] hover:border-[#C6FF00] text-left transition-all cursor-pointer group"
+                  className={`p-3 rounded-xl bg-[#080B0B] border ${initialRole === 'personal' ? 'border-[#C6FF00] shadow-[0_0_12px_rgba(198,255,0,0.15)]' : 'border-[#2D3236]'} hover:border-[#C6FF00] text-left transition-all cursor-pointer group`}
                 >
-                  <div className="text-xs font-bold text-white group-hover:text-[#C6FF00]">
-                    Perfil Treinador
+                  <div className="text-xs font-bold text-white group-hover:text-[#C6FF00] flex items-center justify-between">
+                    <span>Perfil Treinador</span>
+                    {initialRole === 'personal' && <span className="text-[10px] text-[#C6FF00] font-normal">Ativo</span>}
                   </div>
                   <div className="text-[10px] text-[#A7A7A7]">Testar visão do coach</div>
                 </button>
@@ -89,7 +103,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                handleSimulateLogin('aluno');
+                handleSimulateLogin(initialRole);
               }}
               className="space-y-3.5 mt-3"
             >
@@ -127,9 +141,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, onSuccess
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-[#C6FF00] text-[#080B0B] font-bold text-xs tracking-tight hover:bg-[#b8f000] transition-all lime-glow-sm cursor-pointer"
+                className="w-full py-3 rounded-xl bg-[#C6FF00] text-[#08080A] font-bold text-xs tracking-tight hover:bg-[#b8f000] transition-all lime-glow-sm cursor-pointer"
               >
-                Acessar Plataforma
+                {initialRole === 'personal' ? 'Acessar como Profissional' : 'Acessar como Aluno'}
               </button>
             </form>
           </div>

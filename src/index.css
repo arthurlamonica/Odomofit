@@ -227,3 +227,111 @@ h1, h2, h3, h4, .font-heading, .font-montserrat {
 ::-webkit-scrollbar-thumb:hover {
   background: #C6FF00;
 }
+
+/* =========================================================================
+   7. ANIMAÇÕES DINÂMICAS DO HERO & SCROLL INTERATIVO
+   ========================================================================= */
+@keyframes mouseWheelMove {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(7px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(7px);
+    opacity: 0;
+  }
+}
+
+@keyframes chevronScrollPulse {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}
+
+@keyframes ecgLineAnimation {
+  0% {
+    stroke-dashoffset: 320;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes neonOrbsFloat {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.5;
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.08);
+    opacity: 0.75;
+  }
+  66% {
+    transform: translate(-20px, 25px) scale(0.95);
+    opacity: 0.6;
+  }
+}
+
+@keyframes popFadeUp {
+  0% {
+    transform: translateY(0) scale(0.85);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-32px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-mouse-wheel {
+  animation: mouseWheelMove 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.animate-chevron-pulse {
+  animation: chevronScrollPulse 1.6s ease-in-out infinite;
+}
+
+.animate-ecg-line {
+  stroke-dasharray: 320;
+  animation: ecgLineAnimation 2.4s linear infinite;
+}
+
+.animate-neon-orb {
+  animation: neonOrbsFloat 10s ease-in-out infinite;
+}
+
+.animate-pop-fade {
+  animation: popFadeUp 0.8s ease-out forwards;
+}
+
+/* Grid Cibernético com Máscara Radial Suave */
+.cyber-grid-overlay {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(198, 255, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(198, 255, 0, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 20%, transparent 80%);
+}
+
+/* Perspectiva 3D para Efeito Tilt */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+

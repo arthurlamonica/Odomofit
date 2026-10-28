@@ -4,9 +4,9 @@ echo =========================================================
 echo             ODomoFit - Servidor Web Local
 echo =========================================================
 echo.
-echo Abrindo o site no navegador em: http://localhost:5174/
-echo Aguarde alguns instantes...
+echo Iniciando o servidor web da ODomoFit...
+echo O site abrira automaticamente no seu navegador!
 echo.
-start http://localhost:5174/
-npm.cmd run dev
+npm.cmd run dev -- --open
 pause
+

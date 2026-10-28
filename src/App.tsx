@@ -10,6 +10,7 @@ import { AppDownloadBanner } from './components/AppDownloadBanner';
 import { Footer } from './components/Footer';
 import { InterestModal } from './components/InterestModal';
 import { AuthModal } from './components/AuthModal';
+import { ScrollProgressBar, BackToTopButton } from './components/ScrollExperience';
 
 export const App: React.FC = () => {
   const [isInterestModalOpen, setIsInterestModalOpen] = useState(false);
@@ -30,6 +31,8 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#08080A] text-white font-sans selection:bg-[#C6FF00] selection:text-[#08080A] relative overflow-x-hidden">
+      {/* 1. Barra Laser de Progresso do Scroll Dinâmica no Topo */}
+      <ScrollProgressBar />
 
       {/* 2. Header / Barra de Navegação */}
       <Header
@@ -69,7 +72,10 @@ export const App: React.FC = () => {
       {/* 4. Rodapé Cinematográfico com Status Operacional do Sistema */}
       <Footer />
 
-      {/* 5. Modais Interativos Funcionais */}
+      {/* 5. Botão Flutuante de Retorno ao Topo com Progresso Circular */}
+      <BackToTopButton />
+
+      {/* 6. Modais Interativos Funcionais */}
       <InterestModal
         isOpen={isInterestModalOpen}
         onClose={() => setIsInterestModalOpen(false)}

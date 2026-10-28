@@ -89,11 +89,10 @@ export const TrainingCycle: React.FC = () => {
           <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full p-2 bg-gradient-to-tr from-[#C6FF00] via-white/20 to-transparent shadow-[0_0_50px_rgba(198,255,0,0.2)] z-20">
             <div className="w-full h-full rounded-full overflow-hidden bg-[#131418] relative">
               <img
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&auto=format&fit=crop&q=80"
-                alt="Treinador Responsável"
-                className="w-full h-full object-cover filter contrast-[1.08]"
+                src="/images/logo_odomo_symbol.jpg"
+                alt="ODomoFit Logo"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#08080A]/60 via-transparent to-transparent" />
             </div>
 
             {/* Badges Flutuantes Circulares da Referência */}

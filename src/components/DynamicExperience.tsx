@@ -5,7 +5,7 @@ export const DynamicExperience: React.FC = () => {
   const [activeMetric, setActiveMetric] = useState<'heart' | 'cal'>('heart');
 
   return (
-    <section id="experiencia" className="py-20 sm:py-28 bg-[#08080A] relative overflow-hidden">
+    <section id="experiencia" className="relative z-10 py-20 sm:py-28 bg-transparent overflow-hidden">
       
       {/* Halo de luz sutil no fundo */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#C6FF00]/5 blur-[160px] pointer-events-none rounded-full" />

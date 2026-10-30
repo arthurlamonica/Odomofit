@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#08080A] border-t border-white/[0.08] text-[#9FA1AC] text-xs pt-16 sm:pt-20 pb-12 relative overflow-hidden">
+    <footer className="relative z-10 bg-[#08080A]/60 backdrop-blur-md border-t border-white/[0.08] text-[#9FA1AC] text-xs pt-16 sm:pt-20 pb-12 overflow-hidden">
       
       {/* Halo sutil no rodapé */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-[#C6FF00]/5 blur-[100px] pointer-events-none rounded-full" />
@@ -128,7 +128,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar com Indicador de Sistema Operacional */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#9FA1AC]/80">
           <div>
-            © {new Date().getFullYear()} ODomoFit®. Todos os direitos reservados.
+            © 2026 ODomoFit®. Todos os direitos reservados.
           </div>
 
           <div className="flex items-center gap-2 font-['Montserrat'] font-semibold text-[11px] text-white/90">

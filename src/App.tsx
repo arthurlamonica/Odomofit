@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { ExploreProgram } from './components/ExploreProgram';
@@ -11,12 +11,23 @@ import { Footer } from './components/Footer';
 import { InterestModal } from './components/InterestModal';
 import { AuthModal } from './components/AuthModal';
 import { ScrollProgressBar, BackToTopButton } from './components/ScrollExperience';
+import { GlobalBackgroundEffects } from './components/GlobalBackgroundEffects';
 
 export const App: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
   const [isInterestModalOpen, setIsInterestModalOpen] = useState(false);
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authRole, setAuthRole] = useState<'aluno' | 'personal'>('aluno');
   const [selectedPlanId, setSelectedPlanId] = useState<string>('premium');
+
+  // Monitorar scroll para alimentar a inércia cinética das partículas no site todo
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleOpenAuth = (role: 'aluno' | 'personal' = 'aluno') => {
     setAuthRole(role);
@@ -37,6 +48,9 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#08080A] text-white font-sans selection:bg-[#C6FF00] selection:text-[#08080A] relative overflow-x-hidden">
+      {/* 0. Efeito Global de Movimento e Partículas Cinéticas no Fundo (Replicado da Hero para todo o site) */}
+      <GlobalBackgroundEffects scrollY={scrollY} />
+
       {/* 1. Barra Laser de Progresso do Scroll Dinâmica no Topo */}
       <ScrollProgressBar />
 
@@ -47,7 +61,7 @@ export const App: React.FC = () => {
       />
 
       {/* 3. Fluxo Principal de Seções 1:1 com a Imagem de Referência */}
-      <main>
+      <main className="relative z-10">
         {/* Seção 1: Hero Monumental com Atleta e Balões Flutuantes Interativos */}
         <HeroSection
           onOpenInterest={() => handleOpenInterest()}

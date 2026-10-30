@@ -57,7 +57,7 @@ export const TrainingCycle: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 sm:py-32 bg-[#08080A] relative overflow-hidden">
+    <section className="relative z-10 py-20 sm:py-32 bg-transparent overflow-hidden">
       
       {/* Halo de Luz Neon Central */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#C6FF00]/5 blur-[160px] pointer-events-none rounded-full" />

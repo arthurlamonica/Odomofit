@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown, Heart, Flame, Activity, Zap, ShieldCheck } from 'lucide-react';
 import gsap from 'gsap';
-import { HeroBackgroundEffects } from './HeroBackgroundEffects';
 
 interface HeroSectionProps {
   onOpenInterest: () => void;
@@ -130,7 +129,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenInterest, onExpl
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-[#08080A] text-white pt-24 sm:pt-28 pb-10 sm:pb-14 perspective-container select-none"
+      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden bg-transparent text-white pt-24 sm:pt-28 pb-10 sm:pb-14 select-none"
     >
       {/* =========================================================================
           1. CAMADA DE FUNDO CINEMATOGRÁFICA COM PARALLAX NO SCROLL
@@ -158,12 +157,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenInterest, onExpl
       </div>
 
       {/* =========================================================================
-          2. EFEITOS DINÂMICOS DE FUNDO (PARTÍCULAS, SPOTLIGHT E GRID)
-          ========================================================================= */}
-      <HeroBackgroundEffects scrollY={scrollY} />
-
-      {/* =========================================================================
-          3. CONTEÚDO PRINCIPAL (COM PARALLAX MULTI-CAMADA E 3D HUD)
+          2. CONTEÚDO PRINCIPAL (COM PARALLAX MULTI-CAMADA E 3D HUD)
           ========================================================================= */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex-1 flex flex-col justify-center my-auto">
         <div

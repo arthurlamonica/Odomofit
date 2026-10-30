@@ -56,7 +56,7 @@ export const ExploreProgram: React.FC = () => {
   };
 
   return (
-    <section id="programas" className="relative py-20 sm:py-28 bg-[#08080A] overflow-hidden">
+    <section id="programas" className="relative z-10 py-20 sm:py-28 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Cabeçalho da Seção com Título e Setas de Navegação */}

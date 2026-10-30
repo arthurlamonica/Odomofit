@@ -6,7 +6,7 @@ interface SmartFeaturesProps {
 
 export const SmartFeatures: React.FC<SmartFeaturesProps> = ({ onLearnMore }) => {
   return (
-    <section className="py-20 sm:py-28 bg-[#08080A] relative overflow-hidden">
+    <section className="relative z-10 py-20 sm:py-28 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-24 sm:space-y-32">
         
         {/* =====================================================================

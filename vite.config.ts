@@ -12,6 +12,15 @@ export default defineConfig({
     allowedHosts: true,
     open: true,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/index.js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/index.[ext]',
+      },
+    },
+  },
 })
 
 

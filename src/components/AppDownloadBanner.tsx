@@ -6,7 +6,7 @@ interface AppDownloadBannerProps {
 
 export const AppDownloadBanner: React.FC<AppDownloadBannerProps> = ({ onDownload }) => {
   return (
-    <section className="py-12 sm:py-20 bg-[#08080A] relative overflow-hidden">
+    <section className="relative z-10 py-12 sm:py-20 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Banner com Gradiente da Marca ODomoFit (Verde Neon com Fundo Escuro Profundo) */}

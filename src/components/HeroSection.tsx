@@ -151,7 +151,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenInterest, onExpl
         <div className="absolute inset-0 bg-gradient-to-r from-[#08080A]/95 via-[#08080A]/85 sm:via-[#08080A]/70 md:via-[#08080A]/55 to-[#08080A]/35" />
 
         {/* Gradiente Vertical: Fundo 100% fundido com o preto #08080A do restante do site */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#08080A] via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#08080A] via-[#08080A]/40 to-black/60" />
 
         {/* Ruído Cinematográfico */}
         <div className="absolute inset-0 opacity-[0.035] pointer-events-none noise-overlay" />
@@ -163,7 +163,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenInterest, onExpl
       <HeroBackgroundEffects scrollY={scrollY} />
 
       {/* =========================================================================
-          3. CONTEÚDO PRINCIPAL (COM PARALLAX MULTI-CAMADA E 3D HUD)
+          3. DEGRADÊ CINEMATOGRÁFICO DE TRANSIÇÃO ULTRA SUAVE (FUSÃO SEM LINHAS)
+          ========================================================================= */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-48 sm:h-72 lg:h-96 pointer-events-none z-[6]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(8, 8, 10, 0) 0%, rgba(8, 8, 10, 0.05) 20%, rgba(8, 8, 10, 0.22) 40%, rgba(8, 8, 10, 0.55) 60%, rgba(8, 8, 10, 0.84) 80%, rgba(8, 8, 10, 0.98) 95%, #08080A 100%)',
+        }}
+      />
+
+      {/* =========================================================================
+          4. CONTEÚDO PRINCIPAL (COM PARALLAX MULTI-CAMADA E 3D HUD)
           ========================================================================= */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex-1 flex flex-col justify-center my-auto">
         <div

@@ -202,7 +202,13 @@ export const HeroBackgroundEffects: React.FC<HeroBackgroundEffectsProps> = ({ sc
   }, []);
 
   return (
-    <div className="absolute inset-0 pointer-events-none z-[1] overflow-hidden">
+    <div
+      className="absolute inset-0 pointer-events-none z-[1] overflow-hidden"
+      style={{
+        maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%)',
+      }}
+    >
       {/* 1. Canvas Dinâmico de Partículas Cinéticas da Hero */}
       <canvas
         ref={canvasRef}

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown, Heart, Flame, Activity, Zap, ShieldCheck } from 'lucide-react';
 import gsap from 'gsap';
+import { HeroBackgroundEffects } from './HeroBackgroundEffects';
 
 interface HeroSectionProps {
   onOpenInterest: () => void;
@@ -157,7 +158,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenInterest, onExpl
       </div>
 
       {/* =========================================================================
-          2. CONTEÚDO PRINCIPAL (COM PARALLAX MULTI-CAMADA E 3D HUD)
+          2. EFEITOS DINÂMICOS DE FUNDO NA HERO (PARTÍCULAS, SPOTLIGHT E GRID)
+          ========================================================================= */}
+      <HeroBackgroundEffects scrollY={scrollY} />
+
+      {/* =========================================================================
+          3. CONTEÚDO PRINCIPAL (COM PARALLAX MULTI-CAMADA E 3D HUD)
           ========================================================================= */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex-1 flex flex-col justify-center my-auto">
         <div
